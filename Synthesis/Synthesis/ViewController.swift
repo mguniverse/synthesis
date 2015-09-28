@@ -287,8 +287,8 @@ class ViewController: UIViewController {
             loadSpaces()
         }
         else if (b2if == true) {
-            temp = a3p;
-            a3p = b1p;
+            temp = b2p;
+            b2p = b1p;
             b1p = temp;
             
             cancelGrid()
