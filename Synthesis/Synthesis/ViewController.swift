@@ -477,15 +477,595 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func c1a(sender: AnyObject) {
+        if (c1if == true) {
+            cancelGrid()
+        }
+        else if (b1if == true) {
+            temp = b1p;
+            b1p = c1p;
+            c1p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (c2if == true) {
+            temp = c2p;
+            c2p = c1p;
+            c1p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (d1if == true) {
+            temp = d1p;
+            d1p = c1p;
+            c1p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (c1p != 0) {
+            c1if = true
+            
+            a1c.alpha = animationIntensity
+            a2c.alpha = animationIntensity
+            a3c.alpha = animationIntensity
+            //b1c.alpha = animationIntensity
+            b2c.alpha = animationIntensity
+            b3c.alpha = animationIntensity
+            //c1c.alpha = animationIntensity
+            //c2c.alpha = animationIntensity
+            c3c.alpha = animationIntensity
+            //d1c.alpha = animationIntensity
+            d2c.alpha = animationIntensity
+            d3c.alpha = animationIntensity
+            e1c.alpha = animationIntensity
+            e2c.alpha = animationIntensity
+            e3c.alpha = animationIntensity
+            
+            a1v.alpha = animationIntensity
+            a2v.alpha = animationIntensity
+            a3v.alpha = animationIntensity
+            //b1v.alpha = animationIntensity
+            b2v.alpha = animationIntensity
+            b3v.alpha = animationIntensity
+            //c1v.alpha = animationIntensity
+            //c2v.alpha = animationIntensity
+            c3v.alpha = animationIntensity
+            //d1v.alpha = animationIntensity
+            d2v.alpha = animationIntensity
+            d3v.alpha = animationIntensity
+            e1v.alpha = animationIntensity
+            e2v.alpha = animationIntensity
+            e3v.alpha = animationIntensity
+        }
+    }
+    
+    @IBAction func c2a(sender: AnyObject) {
+        if (c2if == true) {
+            cancelGrid()
+        }
+        else if (b2if == true) {
+            temp = b2p;
+            b2p = c2p;
+            c2p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (c1if == true) {
+            temp = c1p;
+            c1p = c2p;
+            c2p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (c3if == true) {
+            temp = c3p;
+            c3p = c2p;
+            c2p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (d2if == true) {
+            temp = d2p;
+            d2p = c2p;
+            c2p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (c2p != 0) {
+            c2if = true
+            
+            a1c.alpha = animationIntensity
+            a2c.alpha = animationIntensity
+            a3c.alpha = animationIntensity
+            b1c.alpha = animationIntensity
+            //b2c.alpha = animationIntensity
+            b3c.alpha = animationIntensity
+            //c1c.alpha = animationIntensity
+            //c2c.alpha = animationIntensity
+            //c3c.alpha = animationIntensity
+            d1c.alpha = animationIntensity
+            //d2c.alpha = animationIntensity
+            d3c.alpha = animationIntensity
+            e1c.alpha = animationIntensity
+            e2c.alpha = animationIntensity
+            e3c.alpha = animationIntensity
+            
+            a1v.alpha = animationIntensity
+            a2v.alpha = animationIntensity
+            a3v.alpha = animationIntensity
+            b1v.alpha = animationIntensity
+            //b2v.alpha = animationIntensity
+            b3v.alpha = animationIntensity
+            //c1v.alpha = animationIntensity
+            //c2v.alpha = animationIntensity
+            //c3v.alpha = animationIntensity
+            d1v.alpha = animationIntensity
+            //d2v.alpha = animationIntensity
+            d3v.alpha = animationIntensity
+            e1v.alpha = animationIntensity
+            e2v.alpha = animationIntensity
+            e3v.alpha = animationIntensity
+        }
+    }
+    
+    @IBAction func c3a(sender: AnyObject) {
+        if (c3if == true) {
+            cancelGrid()
+        }
+        else if (b3if == true) {
+            temp = b3p;
+            b3p = c3p;
+            c3p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (c2if == true) {
+            temp = c2p;
+            c2p = c3p;
+            c3p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (d3if == true) {
+            temp = d3p;
+            d3p = c3p;
+            c3p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (c3p != 0) {
+            c3if = true
+            
+            a1c.alpha = animationIntensity
+            a2c.alpha = animationIntensity
+            a3c.alpha = animationIntensity
+            b1c.alpha = animationIntensity
+            b2c.alpha = animationIntensity
+            //b3c.alpha = animationIntensity
+            c1c.alpha = animationIntensity
+            //c2c.alpha = animationIntensity
+            //c3c.alpha = animationIntensity
+            d1c.alpha = animationIntensity
+            d2c.alpha = animationIntensity
+            //d3c.alpha = animationIntensity
+            e1c.alpha = animationIntensity
+            e2c.alpha = animationIntensity
+            e3c.alpha = animationIntensity
+            
+            a1v.alpha = animationIntensity
+            a2v.alpha = animationIntensity
+            a3v.alpha = animationIntensity
+            b1v.alpha = animationIntensity
+            b2v.alpha = animationIntensity
+            //b3v.alpha = animationIntensity
+            c1v.alpha = animationIntensity
+            //c2v.alpha = animationIntensity
+            //c3v.alpha = animationIntensity
+            d1v.alpha = animationIntensity
+            d2v.alpha = animationIntensity
+            //d3v.alpha = animationIntensity
+            e1v.alpha = animationIntensity
+            e2v.alpha = animationIntensity
+            e3v.alpha = animationIntensity
+        }
+    }
+    
+    @IBAction func d1a(sender: AnyObject) {
+        if (d1if == true) {
+            cancelGrid()
+        }
+        else if (c1if == true) {
+            temp = c1p;
+            c1p = d1p;
+            d1p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (d2if == true) {
+            temp = d2p;
+            d2p = d1p;
+            d1p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (e1if == true) {
+            temp = e1p;
+            e1p = d1p;
+            d1p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (d1p != 0) {
+            d1if = true
+            
+            a1c.alpha = animationIntensity
+            a2c.alpha = animationIntensity
+            a3c.alpha = animationIntensity
+            b1c.alpha = animationIntensity
+            b2c.alpha = animationIntensity
+            b3c.alpha = animationIntensity
+            //c1c.alpha = animationIntensity
+            c2c.alpha = animationIntensity
+            c3c.alpha = animationIntensity
+            //d1c.alpha = animationIntensity
+            //d2c.alpha = animationIntensity
+            d3c.alpha = animationIntensity
+            //e1c.alpha = animationIntensity
+            e2c.alpha = animationIntensity
+            e3c.alpha = animationIntensity
+            
+            a1v.alpha = animationIntensity
+            a2v.alpha = animationIntensity
+            a3v.alpha = animationIntensity
+            b1v.alpha = animationIntensity
+            b2v.alpha = animationIntensity
+            b3v.alpha = animationIntensity
+            //c1v.alpha = animationIntensity
+            c2v.alpha = animationIntensity
+            c3v.alpha = animationIntensity
+            //d1v.alpha = animationIntensity
+            //d2v.alpha = animationIntensity
+            d3v.alpha = animationIntensity
+            //e1v.alpha = animationIntensity
+            e2v.alpha = animationIntensity
+            e3v.alpha = animationIntensity
+        }
+    }
+    
+    @IBAction func d2a(sender: AnyObject) {
+        if (d2if == true) {
+            cancelGrid()
+        }
+        else if (c2if == true) {
+            temp = c2p;
+            c2p = d2p;
+            d2p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (d1if == true) {
+            temp = d1p;
+            d1p = d2p;
+            d2p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (d3if == true) {
+            temp = d3p;
+            d3p = d2p;
+            d2p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (e2if == true) {
+            temp = e2p;
+            e2p = d2p;
+            d2p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (d2p != 0) {
+            d2if = true
+            
+            a1c.alpha = animationIntensity
+            a2c.alpha = animationIntensity
+            a3c.alpha = animationIntensity
+            b1c.alpha = animationIntensity
+            b2c.alpha = animationIntensity
+            b3c.alpha = animationIntensity
+            c1c.alpha = animationIntensity
+            //c2c.alpha = animationIntensity
+            c3c.alpha = animationIntensity
+            //d1c.alpha = animationIntensity
+            //d2c.alpha = animationIntensity
+            //d3c.alpha = animationIntensity
+            e1c.alpha = animationIntensity
+            //e2c.alpha = animationIntensity
+            e3c.alpha = animationIntensity
+            
+            a1v.alpha = animationIntensity
+            a2v.alpha = animationIntensity
+            a3v.alpha = animationIntensity
+            b1v.alpha = animationIntensity
+            b2v.alpha = animationIntensity
+            b3v.alpha = animationIntensity
+            c1v.alpha = animationIntensity
+            //c2v.alpha = animationIntensity
+            c3v.alpha = animationIntensity
+            //d1v.alpha = animationIntensity
+            //d2v.alpha = animationIntensity
+            //d3v.alpha = animationIntensity
+            e1v.alpha = animationIntensity
+            //e2v.alpha = animationIntensity
+            e3v.alpha = animationIntensity
+        }
+    }
+    
+    @IBAction func d3a(sender: AnyObject) {
+        if (d3if == true) {
+            cancelGrid()
+        }
+        else if (c3if == true) {
+            temp = c3p;
+            c3p = d3p;
+            d3p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (d2if == true) {
+            temp = d2p;
+            d2p = d3p;
+            d3p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (e3if == true) {
+            temp = e3p;
+            e3p = d3p;
+            d3p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (d3p != 0) {
+            d3if = true
+            
+            a1c.alpha = animationIntensity
+            a2c.alpha = animationIntensity
+            a3c.alpha = animationIntensity
+            b1c.alpha = animationIntensity
+            b2c.alpha = animationIntensity
+            b3c.alpha = animationIntensity
+            c1c.alpha = animationIntensity
+            c2c.alpha = animationIntensity
+            //c3c.alpha = animationIntensity
+            d1c.alpha = animationIntensity
+            //d2c.alpha = animationIntensity
+            //d3c.alpha = animationIntensity
+            e1c.alpha = animationIntensity
+            e2c.alpha = animationIntensity
+            //e3c.alpha = animationIntensity
+            
+            a1v.alpha = animationIntensity
+            a2v.alpha = animationIntensity
+            a3v.alpha = animationIntensity
+            b1v.alpha = animationIntensity
+            b2v.alpha = animationIntensity
+            b3v.alpha = animationIntensity
+            c1v.alpha = animationIntensity
+            c2v.alpha = animationIntensity
+            //c3v.alpha = animationIntensity
+            d1v.alpha = animationIntensity
+            //d2v.alpha = animationIntensity
+            //d3v.alpha = animationIntensity
+            e1v.alpha = animationIntensity
+            e2v.alpha = animationIntensity
+            //e3v.alpha = animationIntensity
+        }
+    }
+    
+    @IBAction func e1a(sender: AnyObject) {
+        if (e1if == true) {
+            cancelGrid()
+        }
+        else if (d1if == true) {
+            temp = d1p;
+            d1p = e1p;
+            e1p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (e2if == true) {
+            temp = e2p;
+            e2p = e1p;
+            e1p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (e1p != 0) {
+            e1if = true
+            
+            a1c.alpha = animationIntensity
+            a2c.alpha = animationIntensity
+            a3c.alpha = animationIntensity
+            b1c.alpha = animationIntensity
+            b2c.alpha = animationIntensity
+            b3c.alpha = animationIntensity
+            c1c.alpha = animationIntensity
+            c2c.alpha = animationIntensity
+            c3c.alpha = animationIntensity
+            //d1c.alpha = animationIntensity
+            d2c.alpha = animationIntensity
+            d3c.alpha = animationIntensity
+            //e1c.alpha = animationIntensity
+            //e2c.alpha = animationIntensity
+            e3c.alpha = animationIntensity
+            
+            a1v.alpha = animationIntensity
+            a2v.alpha = animationIntensity
+            a3v.alpha = animationIntensity
+            b1v.alpha = animationIntensity
+            b2v.alpha = animationIntensity
+            b3v.alpha = animationIntensity
+            c1v.alpha = animationIntensity
+            c2v.alpha = animationIntensity
+            c3v.alpha = animationIntensity
+            //d1v.alpha = animationIntensity
+            d2v.alpha = animationIntensity
+            d3v.alpha = animationIntensity
+            //e1v.alpha = animationIntensity
+            //e2v.alpha = animationIntensity
+            e3v.alpha = animationIntensity
+        }
+    }
+    
+    @IBAction func e2a(sender: AnyObject) {
+        if (e2if == true) {
+            cancelGrid()
+        }
+        else if (d2if == true) {
+            temp = d2p;
+            d2p = e2p;
+            e2p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (e1if == true) {
+            temp = e1p;
+            e1p = e2p;
+            e2p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (e3if == true) {
+            temp = e3p;
+            e3p = e2p;
+            e2p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (e2p != 0) {
+            e2if = true
+            
+            a1c.alpha = animationIntensity
+            a2c.alpha = animationIntensity
+            a3c.alpha = animationIntensity
+            b1c.alpha = animationIntensity
+            b2c.alpha = animationIntensity
+            b3c.alpha = animationIntensity
+            c1c.alpha = animationIntensity
+            c2c.alpha = animationIntensity
+            c3c.alpha = animationIntensity
+            d1c.alpha = animationIntensity
+            //d2c.alpha = animationIntensity
+            d3c.alpha = animationIntensity
+            //e1c.alpha = animationIntensity
+            //e2c.alpha = animationIntensity
+            //e3c.alpha = animationIntensity
+            
+            a1v.alpha = animationIntensity
+            a2v.alpha = animationIntensity
+            a3v.alpha = animationIntensity
+            b1v.alpha = animationIntensity
+            b2v.alpha = animationIntensity
+            b3v.alpha = animationIntensity
+            c1v.alpha = animationIntensity
+            c2v.alpha = animationIntensity
+            c3v.alpha = animationIntensity
+            d1v.alpha = animationIntensity
+            //d2v.alpha = animationIntensity
+            d3v.alpha = animationIntensity
+            //e1v.alpha = animationIntensity
+            //e2v.alpha = animationIntensity
+            //e3v.alpha = animationIntensity
+        }
+    }
+    
+    @IBAction func e3a(sender: AnyObject) {
+        if (e3if == true) {
+            cancelGrid()
+        }
+        else if (d3if == true) {
+            temp = d3p;
+            d3p = e3p;
+            e3p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (e2if == true) {
+            temp = e2p;
+            e2p = e3p;
+            e3p = temp;
+            
+            cancelGrid()
+            loadSpaces()
+        }
+        else if (e3p != 0) {
+            e3if = true
+            
+            a1c.alpha = animationIntensity
+            a2c.alpha = animationIntensity
+            a3c.alpha = animationIntensity
+            b1c.alpha = animationIntensity
+            b2c.alpha = animationIntensity
+            b3c.alpha = animationIntensity
+            c1c.alpha = animationIntensity
+            c2c.alpha = animationIntensity
+            c3c.alpha = animationIntensity
+            d1c.alpha = animationIntensity
+            d2c.alpha = animationIntensity
+            //d3c.alpha = animationIntensity
+            e1c.alpha = animationIntensity
+            //e2c.alpha = animationIntensity
+            //e3c.alpha = animationIntensity
+            
+            a1v.alpha = animationIntensity
+            a2v.alpha = animationIntensity
+            a3v.alpha = animationIntensity
+            b1v.alpha = animationIntensity
+            b2v.alpha = animationIntensity
+            b3v.alpha = animationIntensity
+            c1v.alpha = animationIntensity
+            c2v.alpha = animationIntensity
+            c3v.alpha = animationIntensity
+            d1v.alpha = animationIntensity
+            d2v.alpha = animationIntensity
+            //d3v.alpha = animationIntensity
+            e1v.alpha = animationIntensity
+            //e2v.alpha = animationIntensity
+            //e3v.alpha = animationIntensity
+        }
+    }
+    
     func randomizeGrid(){
         let plant:UInt32 = 1 + (arc4random()%3)
-        /*
         let column = arc4random() % 3
         let row = arc4random() % 5
-        */
-        
-        let column = 0;
-        let row = 0;
         
         if (row == 0) {
             if (column == 0) {
@@ -712,77 +1292,77 @@ class ViewController: UIViewController {
         if (a1p == 1) {
             a1v.alpha = 1
             a1i.alpha = 1
-            self.a1i.image = UIImage(named: "plant")
+            self.a1i.image = UIImage(named: "carrot")
         }
         if (a2p == 1) {
             a2v.alpha = 1
             a2i.alpha = 1
-            self.a2i.image = UIImage(named: "plant")
+            self.a2i.image = UIImage(named: "carrot")
         }
         if (a3p == 1) {
             a3v.alpha = 1
             a3i.alpha = 1
-            self.a3i.image = UIImage(named: "plant")
+            self.a3i.image = UIImage(named: "carrot")
         }
         if (b1p == 1) {
             b1v.alpha = 1
             b1i.alpha = 1
-            self.b1i.image = UIImage(named: "plant")
+            self.b1i.image = UIImage(named: "carrot")
         }
         if (b2p == 1) {
             b2v.alpha = 1
             b2i.alpha = 1
-            self.b2i.image = UIImage(named: "plant")
+            self.b2i.image = UIImage(named: "carrot")
         }
         if (b3p == 1) {
             b3v.alpha = 1
             b3i.alpha = 1
-            self.b3i.image = UIImage(named: "plant")
+            self.b3i.image = UIImage(named: "carrot")
         }
         if (c1p == 1) {
             c1v.alpha = 1
             c1i.alpha = 1
-            self.c1i.image = UIImage(named: "plant")
+            self.c1i.image = UIImage(named: "carrot")
         }
         if (c2p == 1) {
             c2v.alpha = 1
             c2i.alpha = 1
-            self.c2i.image = UIImage(named: "plant")
+            self.c2i.image = UIImage(named: "carrot")
         }
         if (c3p == 1) {
             c3v.alpha = 1
             c3i.alpha = 1
-            self.c3i.image = UIImage(named: "plant")
+            self.c3i.image = UIImage(named: "carrot")
         }
         if (d1p == 1) {
             d1v.alpha = 1
             d1i.alpha = 1
-            self.d1i.image = UIImage(named: "plant")
+            self.d1i.image = UIImage(named: "carrot")
         }
         if (d2p == 1) {
             d2v.alpha = 1
             d2i.alpha = 1
-            self.d2i.image = UIImage(named: "plant")
+            self.d2i.image = UIImage(named: "carrot")
         }
         if (d3p == 1) {
             d3v.alpha = 1
             d3i.alpha = 1
-            self.d3i.image = UIImage(named: "plant")
+            self.d3i.image = UIImage(named: "carrot")
         }
         if (e1p == 1) {
             e1v.alpha = 1
-            a1i.alpha = 1
-            self.e1i.image = UIImage(named: "plant")
+            e1i.alpha = 1
+            self.e1i.image = UIImage(named: "carrot")
         }
         if (e2p == 1) {
             e2v.alpha = 1
-            a2i.alpha = 1
-            self.e2i.image = UIImage(named: "plant")
+            e2i.alpha = 1
+            self.e2i.image = UIImage(named: "carrot")
         }
         if (e3p == 1) {
             e3v.alpha = 1
-            a3i.alpha = 1
-            self.e3i.image = UIImage(named: "plant")
+            e3i.alpha = 1
+            self.e3i.image = UIImage(named: "carrot")
         }
         
         //load tomatoes
@@ -848,95 +1428,95 @@ class ViewController: UIViewController {
         }
         if (e1p == 2) {
             e1v.alpha = 1
-            a1i.alpha = 1
+            e1i.alpha = 1
             self.e1i.image = UIImage(named: "tomato")
         }
         if (e2p == 2) {
             e2v.alpha = 1
-            a2i.alpha = 1
+            e2i.alpha = 1
             self.e2i.image = UIImage(named: "tomato")
         }
         if (e3p == 2) {
             e3v.alpha = 1
-            a3i.alpha = 1
+            e3i.alpha = 1
             self.e3i.image = UIImage(named: "tomato")
         }
         
-        //load corn
+        //load onion
         if (a1p == 3) {
             a1v.alpha = 1
             a1i.alpha = 1
-            self.a1i.image = UIImage(named: "corn")
+            self.a1i.image = UIImage(named: "onion")
         }
         if (a2p == 3) {
             a2v.alpha = 1
             a2i.alpha = 1
-            self.a2i.image = UIImage(named: "corn")
+            self.a2i.image = UIImage(named: "onion")
         }
         if (a3p == 3) {
             a3v.alpha = 1
             a3i.alpha = 1
-            self.a3i.image = UIImage(named: "corn")
+            self.a3i.image = UIImage(named: "onion")
         }
         if (b1p == 3) {
             b1v.alpha = 1
             b1i.alpha = 1
-            self.b1i.image = UIImage(named: "corn")
+            self.b1i.image = UIImage(named: "onion")
         }
         if (b2p == 3) {
             b2v.alpha = 1
             b2i.alpha = 1
-            self.b2i.image = UIImage(named: "corn")
+            self.b2i.image = UIImage(named: "onion")
         }
         if (b3p == 3) {
             b3v.alpha = 1
             b3i.alpha = 1
-            self.b3i.image = UIImage(named: "corn")
+            self.b3i.image = UIImage(named: "onion")
         }
         if (c1p == 3) {
             c1v.alpha = 1
             c1i.alpha = 1
-            self.c1i.image = UIImage(named: "corn")
+            self.c1i.image = UIImage(named: "onion")
         }
         if (c2p == 3) {
             c2v.alpha = 1
             c2i.alpha = 1
-            self.c2i.image = UIImage(named: "corn")
+            self.c2i.image = UIImage(named: "onion")
         }
         if (c3p == 3) {
             c3v.alpha = 1
             c3i.alpha = 1
-            self.c3i.image = UIImage(named: "corn")
+            self.c3i.image = UIImage(named: "onion")
         }
         if (d1p == 3) {
             d1v.alpha = 1
             d1i.alpha = 1
-            self.d1i.image = UIImage(named: "corn")
+            self.d1i.image = UIImage(named: "onion")
         }
         if (d2p == 3) {
             d2v.alpha = 1
             d2i.alpha = 1
-            self.d2i.image = UIImage(named: "corn")
+            self.d2i.image = UIImage(named: "onion")
         }
         if (d3p == 3) {
             d3v.alpha = 1
             d3i.alpha = 1
-            self.d3i.image = UIImage(named: "corn")
+            self.d3i.image = UIImage(named: "onion")
         }
         if (e1p == 3) {
             e1v.alpha = 1
-            a1i.alpha = 1
-            self.e1i.image = UIImage(named: "corn")
+            e1i.alpha = 1
+            self.e1i.image = UIImage(named: "onion")
         }
         if (e2p == 3) {
             e2v.alpha = 1
-            a2i.alpha = 1
-            self.e2i.image = UIImage(named: "corn")
+            e2i.alpha = 1
+            self.e2i.image = UIImage(named: "onion")
         }
         if (e3p == 3) {
             e3v.alpha = 1
-            a3i.alpha = 1
-            self.e3i.image = UIImage(named: "corn")
+            e3i.alpha = 1
+            self.e3i.image = UIImage(named: "onion")
         }
     }
 
