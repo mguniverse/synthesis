@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  Gameplay.swift
 //  Synthesis
 //
-//  Created by Danny Perski on 9/26/15.
-//  Copyright (c) 2015 Danny Perski. All rights reserved.
+//  Created by Danny Perski on 9/28/15.
+//  Copyright © 2015 Danny Perski. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class Gameplay: UIViewController {
     var border:CGFloat = 12.0
     var animationIntensity:CGFloat = 0.1
     
@@ -79,6 +79,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var e2c: UIView!
     @IBOutlet weak var e3c: UIView!
     
+    @IBOutlet weak var dimView: UIView!
+    @IBOutlet weak var endView: UIView!
+    @IBOutlet weak var retryView: UIView!
+    
+    @IBOutlet weak var endLabel: UILabel!
+    @IBOutlet weak var endText: UITextView!
+    
     @IBOutlet weak var a1i: UIImageView!
     @IBOutlet weak var a2i: UIImageView!
     @IBOutlet weak var a3i: UIImageView!
@@ -100,20 +107,22 @@ class ViewController: UIViewController {
             cancelGrid()
         }
         else if (b1if == true) {
-            temp = a1p;
-            a1p = b1p;
-            b1p = temp;
+            temp = a1p
+            a1p = b1p
+            b1p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (a2if == true) {
-            temp = a1p;
-            a1p = a2p;
-            a2p = temp;
+            temp = a1p
+            a1p = a2p
+            a2p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (a1p != 0) {
             a1if = true
@@ -157,28 +166,31 @@ class ViewController: UIViewController {
             cancelGrid()
         }
         else if (a1if == true) {
-            temp = a1p;
-            a1p = a2p;
-            a2p = temp;
+            temp = a1p
+            a1p = a2p
+            a2p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (a3if == true) {
-            temp = a3p;
-            a3p = a2p;
-            a2p = temp;
+            temp = a3p
+            a3p = a2p
+            a2p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (b2if == true) {
-            temp = b2p;
-            b2p = a2p;
-            a2p = temp;
+            temp = b2p
+            b2p = a2p
+            a2p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (a2p != 0) {
             a2if = true
@@ -222,20 +234,22 @@ class ViewController: UIViewController {
             cancelGrid()
         }
         else if (a2if == true) {
-            temp = a2p;
-            a2p = a3p;
-            a3p = temp;
+            temp = a2p
+            a2p = a3p
+            a3p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (b3if == true) {
-            temp = b3p;
-            b3p = a3p;
-            a3p = temp;
+            temp = b3p
+            b3p = a3p
+            a3p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (a3p != 0) {
             a3if = true
@@ -279,28 +293,31 @@ class ViewController: UIViewController {
             cancelGrid()
         }
         else if (a1if == true) {
-            temp = a1p;
-            a1p = b1p;
-            b1p = temp;
+            temp = a1p
+            a1p = b1p
+            b1p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (b2if == true) {
-            temp = b2p;
-            b2p = b1p;
-            b1p = temp;
+            temp = b2p
+            b2p = b1p
+            b1p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (c1if == true) {
-            temp = c1p;
-            c1p = b1p;
-            b1p = temp;
+            temp = c1p
+            c1p = b1p
+            b1p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (b1p != 0) {
             b1if = true
@@ -344,36 +361,40 @@ class ViewController: UIViewController {
             cancelGrid()
         }
         else if (a2if == true) {
-            temp = a2p;
-            a2p = b2p;
-            b2p = temp;
+            temp = a2p
+            a2p = b2p
+            b2p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (b1if == true) {
-            temp = b1p;
-            b1p = b2p;
-            b2p = temp;
+            temp = b1p
+            b1p = b2p
+            b2p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (b3if == true) {
-            temp = b3p;
-            b3p = b2p;
-            b2p = temp;
+            temp = b3p
+            b3p = b2p
+            b2p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (c2if == true) {
-            temp = c2p;
-            c2p = b2p;
-            b2p = temp;
+            temp = c2p
+            c2p = b2p
+            b2p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (b2p != 0) {
             b2if = true
@@ -417,28 +438,31 @@ class ViewController: UIViewController {
             cancelGrid()
         }
         else if (a3if == true) {
-            temp = a3p;
-            a3p = b3p;
-            b3p = temp;
+            temp = a3p
+            a3p = b3p
+            b3p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (b2if == true) {
-            temp = b2p;
-            b2p = b3p;
-            b3p = temp;
+            temp = b2p
+            b2p = b3p
+            b3p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (c3if == true) {
-            temp = c3p;
-            c3p = b3p;
-            b3p = temp;
+            temp = c3p
+            c3p = b3p
+            b3p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (b3p != 0) {
             b3if = true
@@ -482,28 +506,31 @@ class ViewController: UIViewController {
             cancelGrid()
         }
         else if (b1if == true) {
-            temp = b1p;
-            b1p = c1p;
-            c1p = temp;
+            temp = b1p
+            b1p = c1p
+            c1p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (c2if == true) {
-            temp = c2p;
-            c2p = c1p;
-            c1p = temp;
+            temp = c2p
+            c2p = c1p
+            c1p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (d1if == true) {
-            temp = d1p;
-            d1p = c1p;
-            c1p = temp;
+            temp = d1p
+            d1p = c1p
+            c1p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (c1p != 0) {
             c1if = true
@@ -547,36 +574,40 @@ class ViewController: UIViewController {
             cancelGrid()
         }
         else if (b2if == true) {
-            temp = b2p;
-            b2p = c2p;
-            c2p = temp;
+            temp = b2p
+            b2p = c2p
+            c2p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (c1if == true) {
-            temp = c1p;
-            c1p = c2p;
-            c2p = temp;
+            temp = c1p
+            c1p = c2p
+            c2p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (c3if == true) {
-            temp = c3p;
-            c3p = c2p;
-            c2p = temp;
+            temp = c3p
+            c3p = c2p
+            c2p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (d2if == true) {
-            temp = d2p;
-            d2p = c2p;
-            c2p = temp;
+            temp = d2p
+            d2p = c2p
+            c2p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (c2p != 0) {
             c2if = true
@@ -620,28 +651,31 @@ class ViewController: UIViewController {
             cancelGrid()
         }
         else if (b3if == true) {
-            temp = b3p;
-            b3p = c3p;
-            c3p = temp;
+            temp = b3p
+            b3p = c3p
+            c3p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (c2if == true) {
-            temp = c2p;
-            c2p = c3p;
-            c3p = temp;
+            temp = c2p
+            c2p = c3p
+            c3p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (d3if == true) {
-            temp = d3p;
-            d3p = c3p;
-            c3p = temp;
+            temp = d3p
+            d3p = c3p
+            c3p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (c3p != 0) {
             c3if = true
@@ -685,28 +719,31 @@ class ViewController: UIViewController {
             cancelGrid()
         }
         else if (c1if == true) {
-            temp = c1p;
-            c1p = d1p;
-            d1p = temp;
+            temp = c1p
+            c1p = d1p
+            d1p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (d2if == true) {
-            temp = d2p;
-            d2p = d1p;
-            d1p = temp;
+            temp = d2p
+            d2p = d1p
+            d1p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (e1if == true) {
-            temp = e1p;
-            e1p = d1p;
-            d1p = temp;
+            temp = e1p
+            e1p = d1p
+            d1p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (d1p != 0) {
             d1if = true
@@ -750,36 +787,40 @@ class ViewController: UIViewController {
             cancelGrid()
         }
         else if (c2if == true) {
-            temp = c2p;
-            c2p = d2p;
-            d2p = temp;
+            temp = c2p
+            c2p = d2p
+            d2p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (d1if == true) {
-            temp = d1p;
-            d1p = d2p;
-            d2p = temp;
+            temp = d1p
+            d1p = d2p
+            d2p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (d3if == true) {
-            temp = d3p;
-            d3p = d2p;
-            d2p = temp;
+            temp = d3p
+            d3p = d2p
+            d2p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (e2if == true) {
-            temp = e2p;
-            e2p = d2p;
-            d2p = temp;
+            temp = e2p
+            e2p = d2p
+            d2p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (d2p != 0) {
             d2if = true
@@ -823,28 +864,31 @@ class ViewController: UIViewController {
             cancelGrid()
         }
         else if (c3if == true) {
-            temp = c3p;
-            c3p = d3p;
-            d3p = temp;
+            temp = c3p
+            c3p = d3p
+            d3p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (d2if == true) {
-            temp = d2p;
-            d2p = d3p;
-            d3p = temp;
+            temp = d2p
+            d2p = d3p
+            d3p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (e3if == true) {
-            temp = e3p;
-            e3p = d3p;
-            d3p = temp;
+            temp = e3p
+            e3p = d3p
+            d3p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (d3p != 0) {
             d3if = true
@@ -888,20 +932,22 @@ class ViewController: UIViewController {
             cancelGrid()
         }
         else if (d1if == true) {
-            temp = d1p;
-            d1p = e1p;
-            e1p = temp;
+            temp = d1p
+            d1p = e1p
+            e1p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (e2if == true) {
-            temp = e2p;
-            e2p = e1p;
-            e1p = temp;
+            temp = e2p
+            e2p = e1p
+            e1p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (e1p != 0) {
             e1if = true
@@ -945,28 +991,31 @@ class ViewController: UIViewController {
             cancelGrid()
         }
         else if (d2if == true) {
-            temp = d2p;
-            d2p = e2p;
-            e2p = temp;
+            temp = d2p
+            d2p = e2p
+            e2p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (e1if == true) {
-            temp = e1p;
-            e1p = e2p;
-            e2p = temp;
+            temp = e1p
+            e1p = e2p
+            e2p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (e3if == true) {
-            temp = e3p;
-            e3p = e2p;
-            e2p = temp;
+            temp = e3p
+            e3p = e2p
+            e2p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (e2p != 0) {
             e2if = true
@@ -1010,20 +1059,22 @@ class ViewController: UIViewController {
             cancelGrid()
         }
         else if (d3if == true) {
-            temp = d3p;
-            d3p = e3p;
-            e3p = temp;
+            temp = d3p
+            d3p = e3p
+            e3p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (e2if == true) {
-            temp = e2p;
-            e2p = e3p;
-            e3p = temp;
+            temp = e2p
+            e2p = e3p
+            e3p = temp
             
             cancelGrid()
             loadSpaces()
+            endTurn()
         }
         else if (e3p != 0) {
             e3if = true
@@ -1062,6 +1113,31 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func retry(sender: AnyObject) {
+        UIView.animateWithDuration(0.25) {
+            self.dimView.alpha = 0
+            self.endView.alpha = 0
+        }
+        
+        a1p = 0
+        a2p = 0
+        a3p = 0
+        b1p = 0
+        b2p = 0
+        b3p = 0
+        c1p = 0
+        c2p = 0
+        c3p = 0
+        d1p = 0
+        d2p = 0
+        d3p = 0
+        e1p = 0
+        e2p = 0
+        e3p = 0
+        
+        randomizeGrid()
+    }
+    
     func randomizeGrid(){
         let plant:UInt32 = 1 + (arc4random()%3)
         let column = arc4random() % 3
@@ -1069,81 +1145,176 @@ class ViewController: UIViewController {
         
         if (row == 0) {
             if (column == 0) {
-                a1p = plant
+                if (a1p == 0) {
+                    a1p = plant
+                    temp++
+                }
             }
             if (column == 1) {
-                a2p = plant
+                if (a2p == 0) {
+                    a2p = plant
+                    temp++
+                }
             }
             if (column == 2) {
-                a3p = plant
+                if (a3p == 0) {
+                    a3p = plant
+                    temp++
+                }
             }
         }
         else if (row == 1) {
             if (column == 0) {
-                b1p = plant
+                if (b1p == 0) {
+                    b1p = plant
+                    temp++
+                }
             }
             if (column == 1) {
-                b2p = plant
+                if (b2p == 0) {
+                    b2p = plant
+                    temp++
+                }
             }
             if (column == 2) {
-                b3p = plant
+                if (b3p == 0) {
+                    b3p = plant
+                    temp++
+                }
             }
         }
         else if (row == 2) {
             if (column == 0) {
-                c1p = plant
+                if (c1p == 0) {
+                    c1p = plant
+                    temp++
+                }
             }
             if (column == 1) {
-                c2p = plant
+                if (c2p == 0) {
+                    c2p = plant
+                    temp++
+                }
             }
             if (column == 2) {
-                c3p = plant
+                if (c3p == 0) {
+                    c3p = plant
+                    temp++
+                }
             }
         }
         else if (row == 3) {
             if (column == 0) {
-                d1p = plant
+                if (d1p == 0) {
+                    d1p = plant
+                    temp++
+                }
             }
             if (column == 1) {
-                d2p = plant
+                if (d2p == 0) {
+                    d2p = plant
+                    temp++
+                }
             }
             if (column == 2) {
-                d3p = plant
+                if (d3p == 0) {
+                    d3p = plant
+                    temp++
+                }
             }
         }
         else if (row == 4) {
             if (column == 0) {
-                e1p = plant
+                if (e1p == 0) {
+                    e1p = plant
+                    temp++
+                }
             }
             if (column == 1) {
-                e2p = plant
+                if (e2p == 0) {
+                    e2p = plant
+                    temp++
+                }
             }
             if (column == 2) {
-                e3p = plant
+                if (e3p == 0) {
+                    e3p = plant
+                    temp++
+                }
             }
         }
         
         loadSpaces()
     }
     
+    func endTurn(){
+        checkRows()
+        
+        if (a1p != 0 && a2p != 0 && a3p != 0 && b1p != 0 && b2p != 0 && b3p != 0 && c1p != 0 && c2p != 0 && c3p != 0 && d1p != 0 && d2p != 0 && d3p != 0 && e1p != 0 && e2p != 0 && e3p != 0) {
+            gameOver()
+        }
+        else {
+            temp = 0
+            while temp < 1 {
+                randomizeGrid()
+            }
+        }
+    }
+    
+    func checkRows(){
+        if (a1p == a2p && a2p == a3p) {
+            a1p = 0
+            a2p = 0
+            a3p = 0
+        }
+        if (b1p == b2p && b2p == b3p) {
+            b1p = 0
+            b2p = 0
+            b3p = 0
+        }
+        if (c1p == c2p && c2p == c3p) {
+            c1p = 0
+            c2p = 0
+            c3p = 0
+        }
+        if (d1p == d2p && d2p == d3p) {
+            d1p = 0
+            d2p = 0
+            d3p = 0
+        }
+        if (e1p == e2p && e2p == e3p) {
+            e1p = 0
+            e2p = 0
+            e3p = 0
+        }
+    }
+    
+    func gameOver(){
+        UIView.animateWithDuration(0.25) {
+            self.dimView.alpha = 0.5
+            self.endView.alpha = 1
+        }
+    }
+    
     func cancelGrid(){
         //mark all of the pieces as unselected
-        a1if = false;
-        a2if = false;
-        a3if = false;
-        b1if = false;
-        b2if = false;
-        b3if = false;
-        c1if = false;
-        c2if = false;
-        c3if = false;
-        d1if = false;
-        d2if = false;
-        d3if = false;
-        e1if = false;
-        e2if = false;
-        e3if = false;
+        a1if = false
+        a2if = false
+        a3if = false
+        b1if = false
+        b2if = false
+        b3if = false
+        c1if = false
+        c2if = false
+        c3if = false
+        d1if = false
+        d2if = false
+        d3if = false
+        e1if = false
+        e2if = false
+        e3if = false
         
+        //make all views visible
         a1v.alpha = 1
         a2v.alpha = 1
         a3v.alpha = 1
@@ -1159,6 +1330,38 @@ class ViewController: UIViewController {
         e1v.alpha = 1
         e2v.alpha = 1
         e3v.alpha = 1
+        
+        a1c.alpha = 1
+        a2c.alpha = 1
+        a3c.alpha = 1
+        b1c.alpha = 1
+        b2c.alpha = 1
+        b3c.alpha = 1
+        c1c.alpha = 1
+        c2c.alpha = 1
+        c3c.alpha = 1
+        d1c.alpha = 1
+        d2c.alpha = 1
+        d3c.alpha = 1
+        e1c.alpha = 1
+        e2c.alpha = 1
+        e3c.alpha = 1
+        
+        a1i.alpha = 1
+        a2i.alpha = 1
+        a3i.alpha = 1
+        b1i.alpha = 1
+        b2i.alpha = 1
+        b3i.alpha = 1
+        c1i.alpha = 1
+        c2i.alpha = 1
+        c3i.alpha = 1
+        d1i.alpha = 1
+        d2i.alpha = 1
+        d3i.alpha = 1
+        e1i.alpha = 1
+        e2i.alpha = 1
+        e3i.alpha = 1
     }
     
     func loadSpaces(){
@@ -1519,10 +1722,12 @@ class ViewController: UIViewController {
             self.e3i.image = UIImage(named: "onion")
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.dimView.alpha = 0
+        self.endView.alpha = 0
         
         a1v.layer.cornerRadius = border
         a1v.clipsToBounds = true
@@ -1616,15 +1821,25 @@ class ViewController: UIViewController {
         e2i.clipsToBounds = true
         e3i.layer.cornerRadius = border
         e3i.clipsToBounds = true
+        endView.layer.cornerRadius = border
+        endView.clipsToBounds = true
+        retryView.layer.cornerRadius = border
+        retryView.clipsToBounds = true
+        
+        endView.clipsToBounds = false
+        endView.layer.cornerRadius = border
+        endView.layer.shadowRadius = border
+        endView.layer.shadowColor = UIColor.darkGrayColor().CGColor
+        endView.layer.shadowOffset = CGSizeMake(0,0)
+        endView.layer.shadowOpacity = 0.2
         
         randomizeGrid()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
-
