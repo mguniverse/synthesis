@@ -11,7 +11,7 @@ import UIKit
 class Gameplay: UIViewController {
     var border:CGFloat = 12.0
     var animationIntensity:CGFloat = 0.1
-    var animationSpeed:CGFloat = 0.1
+    var animationSpeed:Double = 0.25
     
     //declares the type of space these are, 0 being empty
     var a1p:UInt32 = 0
@@ -112,7 +112,7 @@ class Gameplay: UIViewController {
             a1p = b1p
             b1p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.a1c.alpha = 0
                 self.b1c.alpha = 0
                 }, completion: { finished in
@@ -124,7 +124,7 @@ class Gameplay: UIViewController {
             a1p = a2p
             a2p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.a1c.alpha = 0
                 self.a2c.alpha = 0
                 }, completion: { finished in
@@ -134,7 +134,7 @@ class Gameplay: UIViewController {
         else if (a1p != 0) {
             a1if = true
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 //a1c.alpha = 0.1
                 //a2c.alpha = 0.1
                 self.a3c.alpha = 0.1
@@ -181,7 +181,7 @@ class Gameplay: UIViewController {
             a1p = a2p
             a2p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.a1c.alpha = 0
                 self.a2c.alpha = 0
                 }, completion: { finished in
@@ -193,7 +193,7 @@ class Gameplay: UIViewController {
             a3p = a2p
             a2p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.a2c.alpha = 0
                 self.a3c.alpha = 0
                 }, completion: { finished in
@@ -205,7 +205,7 @@ class Gameplay: UIViewController {
             b2p = a2p
             a2p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.b2c.alpha = 0
                 self.a2c.alpha = 0
                 }, completion: { finished in
@@ -215,7 +215,7 @@ class Gameplay: UIViewController {
         else if (a2p != 0) {
             a2if = true
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 //self.a1c.alpha = 0.1
                 //self.a2c.alpha = 0.1
                 //self.a3c.alpha = 0.1
@@ -262,7 +262,7 @@ class Gameplay: UIViewController {
             a2p = a3p
             a3p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.a2c.alpha = 0
                 self.a3c.alpha = 0
                 }, completion: { finished in
@@ -274,7 +274,7 @@ class Gameplay: UIViewController {
             b3p = a3p
             a3p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.b3c.alpha = 0
                 self.a3c.alpha = 0
                 }, completion: { finished in
@@ -284,7 +284,7 @@ class Gameplay: UIViewController {
         else if (a3p != 0) {
             a3if = true
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.a1c.alpha = 0.1
                 //self.a2c.alpha = 0.1
                 //self.a3c.alpha = 0.1
@@ -331,7 +331,7 @@ class Gameplay: UIViewController {
             a1p = b1p
             b1p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.a1c.alpha = 0
                 self.b1c.alpha = 0
                 }, completion: { finished in
@@ -343,7 +343,7 @@ class Gameplay: UIViewController {
             b2p = b1p
             b1p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.b2c.alpha = 0
                 self.b1c.alpha = 0
                 }, completion: { finished in
@@ -355,7 +355,7 @@ class Gameplay: UIViewController {
             c1p = b1p
             b1p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.c1c.alpha = 0
                 self.b1c.alpha = 0
                 }, completion: { finished in
@@ -365,7 +365,7 @@ class Gameplay: UIViewController {
         else if (b1p != 0) {
             b1if = true
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 //self.a1c.alpha = 0.1
                 self.a2c.alpha = 0.1
                 self.a3c.alpha = 0.1
@@ -412,7 +412,7 @@ class Gameplay: UIViewController {
             a2p = b2p
             b2p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.a2c.alpha = 0
                 self.b2c.alpha = 0
                 }, completion: { finished in
@@ -424,7 +424,7 @@ class Gameplay: UIViewController {
             b1p = b2p
             b2p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.b1c.alpha = 0
                 self.b2c.alpha = 0
                 }, completion: { finished in
@@ -436,7 +436,7 @@ class Gameplay: UIViewController {
             b3p = b2p
             b2p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.b3c.alpha = 0
                 self.b2c.alpha = 0
                 }, completion: { finished in
@@ -448,7 +448,7 @@ class Gameplay: UIViewController {
             c2p = b2p
             b2p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.c2c.alpha = 0
                 self.b2c.alpha = 0
                 }, completion: { finished in
@@ -458,7 +458,7 @@ class Gameplay: UIViewController {
         else if (b2p != 0) {
             b2if = true
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.a1c.alpha = 0.1
                 //self.a2c.alpha = 0.1
                 self.a3c.alpha = 0.1
@@ -505,7 +505,7 @@ class Gameplay: UIViewController {
             a3p = b3p
             b3p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.a3c.alpha = 0
                 self.b3c.alpha = 0
                 }, completion: { finished in
@@ -517,7 +517,7 @@ class Gameplay: UIViewController {
             b2p = b3p
             b3p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.b2c.alpha = 0
                 self.b3c.alpha = 0
                 }, completion: { finished in
@@ -529,7 +529,7 @@ class Gameplay: UIViewController {
             c3p = b3p
             b3p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.c3c.alpha = 0
                 self.b3c.alpha = 0
                 }, completion: { finished in
@@ -539,7 +539,7 @@ class Gameplay: UIViewController {
         else if (b3p != 0) {
             b3if = true
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.a1c.alpha = 0.1
                 self.a2c.alpha = 0.1
                 //self.a3c.alpha = 0.1
@@ -586,7 +586,7 @@ class Gameplay: UIViewController {
             b1p = c1p
             c1p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.b1c.alpha = 0
                 self.c1c.alpha = 0
                 }, completion: { finished in
@@ -598,7 +598,7 @@ class Gameplay: UIViewController {
             c2p = c1p
             c1p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.c2c.alpha = 0
                 self.c1c.alpha = 0
                 }, completion: { finished in
@@ -610,7 +610,7 @@ class Gameplay: UIViewController {
             d1p = c1p
             c1p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.d1c.alpha = 0
                 self.c1c.alpha = 0
                 }, completion: { finished in
@@ -620,7 +620,7 @@ class Gameplay: UIViewController {
         else if (c1p != 0) {
             c1if = true
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.a1c.alpha = 0.1
                 self.a2c.alpha = 0.1
                 self.a3c.alpha = 0.1
@@ -667,7 +667,7 @@ class Gameplay: UIViewController {
             b2p = c2p
             c2p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.b2c.alpha = 0
                 self.c2c.alpha = 0
                 }, completion: { finished in
@@ -679,7 +679,7 @@ class Gameplay: UIViewController {
             c1p = c2p
             c2p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.c1c.alpha = 0
                 self.c2c.alpha = 0
                 }, completion: { finished in
@@ -691,7 +691,7 @@ class Gameplay: UIViewController {
             c3p = c2p
             c2p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.c3c.alpha = 0
                 self.c2c.alpha = 0
                 }, completion: { finished in
@@ -703,7 +703,7 @@ class Gameplay: UIViewController {
             d2p = c2p
             c2p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.d2c.alpha = 0
                 self.c2c.alpha = 0
                 }, completion: { finished in
@@ -713,7 +713,7 @@ class Gameplay: UIViewController {
         else if (c2p != 0) {
             c2if = true
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.a1c.alpha = 0.1
                 self.a2c.alpha = 0.1
                 self.a3c.alpha = 0.1
@@ -760,7 +760,7 @@ class Gameplay: UIViewController {
             b3p = c3p
             c3p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.b3c.alpha = 0
                 self.c3c.alpha = 0
                 }, completion: { finished in
@@ -772,7 +772,7 @@ class Gameplay: UIViewController {
             c2p = c3p
             c3p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.c2c.alpha = 0
                 self.c3c.alpha = 0
                 }, completion: { finished in
@@ -784,7 +784,7 @@ class Gameplay: UIViewController {
             d3p = c3p
             c3p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.d3c.alpha = 0
                 self.c3c.alpha = 0
                 }, completion: { finished in
@@ -794,7 +794,7 @@ class Gameplay: UIViewController {
         else if (c3p != 0) {
             c3if = true
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.a1c.alpha = 0.1
                 self.a2c.alpha = 0.1
                 self.a3c.alpha = 0.1
@@ -841,7 +841,7 @@ class Gameplay: UIViewController {
             c1p = d1p
             d1p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.c1c.alpha = 0
                 self.d1c.alpha = 0
                 }, completion: { finished in
@@ -853,7 +853,7 @@ class Gameplay: UIViewController {
             d2p = d1p
             d1p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.d2c.alpha = 0
                 self.d1c.alpha = 0
                 }, completion: { finished in
@@ -865,7 +865,7 @@ class Gameplay: UIViewController {
             e1p = d1p
             d1p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.e1c.alpha = 0
                 self.d1c.alpha = 0
                 }, completion: { finished in
@@ -875,7 +875,7 @@ class Gameplay: UIViewController {
         else if (d1p != 0) {
             d1if = true
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.a1c.alpha = 0.1
                 self.a2c.alpha = 0.1
                 self.a3c.alpha = 0.1
@@ -922,7 +922,7 @@ class Gameplay: UIViewController {
             c2p = d2p
             d2p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.c2c.alpha = 0
                 self.d2c.alpha = 0
                 }, completion: { finished in
@@ -934,7 +934,7 @@ class Gameplay: UIViewController {
             d1p = d2p
             d2p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.d1c.alpha = 0
                 self.d2c.alpha = 0
                 }, completion: { finished in
@@ -946,7 +946,7 @@ class Gameplay: UIViewController {
             d3p = d2p
             d2p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.d3c.alpha = 0
                 self.d2c.alpha = 0
                 }, completion: { finished in
@@ -958,7 +958,7 @@ class Gameplay: UIViewController {
             e2p = d2p
             d2p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.e2c.alpha = 0
                 self.d2c.alpha = 0
                 }, completion: { finished in
@@ -968,7 +968,7 @@ class Gameplay: UIViewController {
         else if (d2p != 0) {
             d2if = true
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.a1c.alpha = 0.1
                 self.a2c.alpha = 0.1
                 self.a3c.alpha = 0.1
@@ -1015,7 +1015,7 @@ class Gameplay: UIViewController {
             c3p = d3p
             d3p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.c3c.alpha = 0
                 self.d3c.alpha = 0
                 }, completion: { finished in
@@ -1027,7 +1027,7 @@ class Gameplay: UIViewController {
             d2p = d3p
             d3p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.d2c.alpha = 0
                 self.d3c.alpha = 0
                 }, completion: { finished in
@@ -1039,7 +1039,7 @@ class Gameplay: UIViewController {
             e3p = d3p
             d3p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.e3c.alpha = 0
                 self.d3c.alpha = 0
                 }, completion: { finished in
@@ -1049,7 +1049,7 @@ class Gameplay: UIViewController {
         else if (d3p != 0) {
             d3if = true
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.a1c.alpha = 0.1
                 self.a2c.alpha = 0.1
                 self.a3c.alpha = 0.1
@@ -1096,7 +1096,7 @@ class Gameplay: UIViewController {
             d1p = e1p
             e1p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.d1c.alpha = 0
                 self.e1c.alpha = 0
                 }, completion: { finished in
@@ -1108,7 +1108,7 @@ class Gameplay: UIViewController {
             e2p = e1p
             e1p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.e2c.alpha = 0
                 self.e1c.alpha = 0
                 }, completion: { finished in
@@ -1118,7 +1118,7 @@ class Gameplay: UIViewController {
         else if (e1p != 0) {
             e1if = true
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.a1c.alpha = 0.1
                 self.a2c.alpha = 0.1
                 self.a3c.alpha = 0.1
@@ -1165,7 +1165,7 @@ class Gameplay: UIViewController {
             d2p = e2p
             e2p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.d2c.alpha = 0
                 self.e2c.alpha = 0
                 }, completion: { finished in
@@ -1177,7 +1177,7 @@ class Gameplay: UIViewController {
             e1p = e2p
             e2p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.e1c.alpha = 0
                 self.e2c.alpha = 0
                 }, completion: { finished in
@@ -1189,7 +1189,7 @@ class Gameplay: UIViewController {
             e3p = e2p
             e2p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.e3c.alpha = 0
                 self.e2c.alpha = 0
                 }, completion: { finished in
@@ -1199,7 +1199,7 @@ class Gameplay: UIViewController {
         else if (e2p != 0) {
             e2if = true
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.a1c.alpha = 0.1
                 self.a2c.alpha = 0.1
                 self.a3c.alpha = 0.1
@@ -1246,7 +1246,7 @@ class Gameplay: UIViewController {
             d3p = e3p
             e3p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.d3c.alpha = 0
                 self.e3c.alpha = 0
                 }, completion: { finished in
@@ -1258,7 +1258,7 @@ class Gameplay: UIViewController {
             e2p = e3p
             e3p = temp
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.e2c.alpha = 0
                 self.e3c.alpha = 0
                 }, completion: { finished in
@@ -1268,7 +1268,7 @@ class Gameplay: UIViewController {
         else if (e3p != 0) {
             e3if = true
             
-            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
                 self.a1c.alpha = 0.1
                 self.a2c.alpha = 0.1
                 self.a3c.alpha = 0.1
@@ -1307,7 +1307,7 @@ class Gameplay: UIViewController {
     }
     
     @IBAction func retry(sender: AnyObject) {
-        UIView.animateWithDuration(0.2) {
+        UIView.animateWithDuration(animationSpeed) {
             self.dimView.alpha = 0
             self.endView.alpha = 0
         }
@@ -1482,7 +1482,7 @@ class Gameplay: UIViewController {
     }
     
     func gameOver(){
-        UIView.animateWithDuration(0.2) {
+        UIView.animateWithDuration(animationSpeed) {
             self.dimView.alpha = 0.5
             self.endView.alpha = 1
         }
@@ -1513,7 +1513,7 @@ class Gameplay: UIViewController {
         e3if = false
         
         //make all views visible
-        UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+        UIView.animateWithDuration(animationSpeed, delay: 0, options: .CurveEaseOut, animations: {
             self.a1v.alpha = 1
             self.a2v.alpha = 1
             self.a3v.alpha = 1
