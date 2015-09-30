@@ -11,6 +11,7 @@ import UIKit
 class Gameplay: UIViewController {
     var border:CGFloat = 12.0
     var animationIntensity:CGFloat = 0.1
+    var animationSpeed:CGFloat = 0.1
     
     //declares the type of space these are, 0 being empty
     var a1p:UInt32 = 0
@@ -111,53 +112,63 @@ class Gameplay: UIViewController {
             a1p = b1p
             b1p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.a1c.alpha = 0
+                self.b1c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (a2if == true) {
             temp = a1p
             a1p = a2p
             a2p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.a1c.alpha = 0
+                self.a2c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (a1p != 0) {
             a1if = true
             
-            //a1c.alpha = animationIntensity
-            //a2c.alpha = animationIntensity
-            a3c.alpha = animationIntensity
-            //b1c.alpha = animationIntensity
-            b2c.alpha = animationIntensity
-            b3c.alpha = animationIntensity
-            c1c.alpha = animationIntensity
-            c2c.alpha = animationIntensity
-            c3c.alpha = animationIntensity
-            d1c.alpha = animationIntensity
-            d2c.alpha = animationIntensity
-            d3c.alpha = animationIntensity
-            e1c.alpha = animationIntensity
-            e2c.alpha = animationIntensity
-            e3c.alpha = animationIntensity
-            
-            //a1v.alpha = animationIntensity
-            //a2v.alpha = animationIntensity
-            a3v.alpha = animationIntensity
-            //b1v.alpha = animationIntensity
-            b2v.alpha = animationIntensity
-            b3v.alpha = animationIntensity
-            c1v.alpha = animationIntensity
-            c2v.alpha = animationIntensity
-            c3v.alpha = animationIntensity
-            d1v.alpha = animationIntensity
-            d2v.alpha = animationIntensity
-            d3v.alpha = animationIntensity
-            e1v.alpha = animationIntensity
-            e2v.alpha = animationIntensity
-            e3v.alpha = animationIntensity
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                //a1c.alpha = 0.1
+                //a2c.alpha = 0.1
+                self.a3c.alpha = 0.1
+                //b1c.alpha = 0.1
+                self.b2c.alpha = 0.1
+                self.b3c.alpha = 0.1
+                self.c1c.alpha = 0.1
+                self.c2c.alpha = 0.1
+                self.c3c.alpha = 0.1
+                self.d1c.alpha = 0.1
+                self.d2c.alpha = 0.1
+                self.d3c.alpha = 0.1
+                self.e1c.alpha = 0.1
+                self.e2c.alpha = 0.1
+                self.e3c.alpha = 0.1
+                
+                //self.a1v.alpha = 0.1
+                //self.a2v.alpha = 0.1
+                self.a3v.alpha = 0.1
+                //self.b1v.alpha = 0.1
+                self.b2v.alpha = 0.1
+                self.b3v.alpha = 0.1
+                self.c1v.alpha = 0.1
+                self.c2v.alpha = 0.1
+                self.c3v.alpha = 0.1
+                self.d1v.alpha = 0.1
+                self.d2v.alpha = 0.1
+                self.d3v.alpha = 0.1
+                self.e1v.alpha = 0.1
+                self.e2v.alpha = 0.1
+                self.e3v.alpha = 0.1
+                }, completion: { finished in
+                    print("")
+            })
         }
     }
     
@@ -170,62 +181,75 @@ class Gameplay: UIViewController {
             a1p = a2p
             a2p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.a1c.alpha = 0
+                self.a2c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (a3if == true) {
             temp = a3p
             a3p = a2p
             a2p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.a2c.alpha = 0
+                self.a3c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (b2if == true) {
             temp = b2p
             b2p = a2p
             a2p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.b2c.alpha = 0
+                self.a2c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (a2p != 0) {
             a2if = true
             
-            //a1c.alpha = animationIntensity
-            //a2c.alpha = animationIntensity
-            //a3c.alpha = animationIntensity
-            b1c.alpha = animationIntensity
-            //b2c.alpha = animationIntensity
-            b3c.alpha = animationIntensity
-            c1c.alpha = animationIntensity
-            c2c.alpha = animationIntensity
-            c3c.alpha = animationIntensity
-            d1c.alpha = animationIntensity
-            d2c.alpha = animationIntensity
-            d3c.alpha = animationIntensity
-            e1c.alpha = animationIntensity
-            e2c.alpha = animationIntensity
-            e3c.alpha = animationIntensity
-            
-            //a1v.alpha = animationIntensity
-            //a2v.alpha = animationIntensity
-            //a3v.alpha = animationIntensity
-            b1v.alpha = animationIntensity
-            //b2v.alpha = animationIntensity
-            b3v.alpha = animationIntensity
-            c1v.alpha = animationIntensity
-            c2v.alpha = animationIntensity
-            c3v.alpha = animationIntensity
-            d1v.alpha = animationIntensity
-            d2v.alpha = animationIntensity
-            d3v.alpha = animationIntensity
-            e1v.alpha = animationIntensity
-            e2v.alpha = animationIntensity
-            e3v.alpha = animationIntensity
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                //self.a1c.alpha = 0.1
+                //self.a2c.alpha = 0.1
+                //self.a3c.alpha = 0.1
+                self.b1c.alpha = 0.1
+                //self.b2c.alpha = 0.1
+                self.b3c.alpha = 0.1
+                self.c1c.alpha = 0.1
+                self.c2c.alpha = 0.1
+                self.c3c.alpha = 0.1
+                self.d1c.alpha = 0.1
+                self.d2c.alpha = 0.1
+                self.d3c.alpha = 0.1
+                self.e1c.alpha = 0.1
+                self.e2c.alpha = 0.1
+                self.e3c.alpha = 0.1
+                
+                //self.a1v.alpha = 0.1
+                //self.a2v.alpha = 0.1
+                //self.a3v.alpha = 0.1
+                self.b1v.alpha = 0.1
+                //self.b2v.alpha = 0.1
+                self.b3v.alpha = 0.1
+                self.c1v.alpha = 0.1
+                self.c2v.alpha = 0.1
+                self.c3v.alpha = 0.1
+                self.d1v.alpha = 0.1
+                self.d2v.alpha = 0.1
+                self.d3v.alpha = 0.1
+                self.e1v.alpha = 0.1
+                self.e2v.alpha = 0.1
+                self.e3v.alpha = 0.1
+                }, completion: { finished in
+                    print("")
+            })
         }
     }
     
@@ -238,53 +262,63 @@ class Gameplay: UIViewController {
             a2p = a3p
             a3p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.a2c.alpha = 0
+                self.a3c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (b3if == true) {
             temp = b3p
             b3p = a3p
             a3p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.b3c.alpha = 0
+                self.a3c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (a3p != 0) {
             a3if = true
             
-            a1c.alpha = animationIntensity
-            //a2c.alpha = animationIntensity
-            //a3c.alpha = animationIntensity
-            b1c.alpha = animationIntensity
-            b2c.alpha = animationIntensity
-            //b3c.alpha = animationIntensity
-            c1c.alpha = animationIntensity
-            c2c.alpha = animationIntensity
-            c3c.alpha = animationIntensity
-            d1c.alpha = animationIntensity
-            d2c.alpha = animationIntensity
-            d3c.alpha = animationIntensity
-            e1c.alpha = animationIntensity
-            e2c.alpha = animationIntensity
-            e3c.alpha = animationIntensity
-            
-            a1v.alpha = animationIntensity
-            //a2v.alpha = animationIntensity
-            //a3v.alpha = animationIntensity
-            b1v.alpha = animationIntensity
-            b2v.alpha = animationIntensity
-            //b3v.alpha = animationIntensity
-            c1v.alpha = animationIntensity
-            c2v.alpha = animationIntensity
-            c3v.alpha = animationIntensity
-            d1v.alpha = animationIntensity
-            d2v.alpha = animationIntensity
-            d3v.alpha = animationIntensity
-            e1v.alpha = animationIntensity
-            e2v.alpha = animationIntensity
-            e3v.alpha = animationIntensity
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.a1c.alpha = 0.1
+                //self.a2c.alpha = 0.1
+                //self.a3c.alpha = 0.1
+                self.b1c.alpha = 0.1
+                self.b2c.alpha = 0.1
+                //self.b3c.alpha = 0.1
+                self.c1c.alpha = 0.1
+                self.c2c.alpha = 0.1
+                self.c3c.alpha = 0.1
+                self.d1c.alpha = 0.1
+                self.d2c.alpha = 0.1
+                self.d3c.alpha = 0.1
+                self.e1c.alpha = 0.1
+                self.e2c.alpha = 0.1
+                self.e3c.alpha = 0.1
+                
+                self.a1v.alpha = 0.1
+                //self.a2v.alpha = 0.1
+                //self.a3v.alpha = 0.1
+                self.b1v.alpha = 0.1
+                self.b2v.alpha = 0.1
+                //self.b3v.alpha = 0.1
+                self.c1v.alpha = 0.1
+                self.c2v.alpha = 0.1
+                self.c3v.alpha = 0.1
+                self.d1v.alpha = 0.1
+                self.d2v.alpha = 0.1
+                self.d3v.alpha = 0.1
+                self.e1v.alpha = 0.1
+                self.e2v.alpha = 0.1
+                self.e3v.alpha = 0.1
+                }, completion: { finished in
+                    print("")
+            })
         }
     }
     
@@ -297,62 +331,75 @@ class Gameplay: UIViewController {
             a1p = b1p
             b1p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.a1c.alpha = 0
+                self.b1c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (b2if == true) {
             temp = b2p
             b2p = b1p
             b1p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.b2c.alpha = 0
+                self.b1c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (c1if == true) {
             temp = c1p
             c1p = b1p
             b1p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.c1c.alpha = 0
+                self.b1c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (b1p != 0) {
             b1if = true
             
-            //a1c.alpha = animationIntensity
-            a2c.alpha = animationIntensity
-            a3c.alpha = animationIntensity
-            //b1c.alpha = animationIntensity
-            //b2c.alpha = animationIntensity
-            b3c.alpha = animationIntensity
-            //c1c.alpha = animationIntensity
-            c2c.alpha = animationIntensity
-            c3c.alpha = animationIntensity
-            d1c.alpha = animationIntensity
-            d2c.alpha = animationIntensity
-            d3c.alpha = animationIntensity
-            e1c.alpha = animationIntensity
-            e2c.alpha = animationIntensity
-            e3c.alpha = animationIntensity
-            
-            //a1v.alpha = animationIntensity
-            a2v.alpha = animationIntensity
-            a3v.alpha = animationIntensity
-            //b1v.alpha = animationIntensity
-            //b2v.alpha = animationIntensity
-            b3v.alpha = animationIntensity
-            //c1v.alpha = animationIntensity
-            c2v.alpha = animationIntensity
-            c3v.alpha = animationIntensity
-            d1v.alpha = animationIntensity
-            d2v.alpha = animationIntensity
-            d3v.alpha = animationIntensity
-            e1v.alpha = animationIntensity
-            e2v.alpha = animationIntensity
-            e3v.alpha = animationIntensity
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                //self.a1c.alpha = 0.1
+                self.a2c.alpha = 0.1
+                self.a3c.alpha = 0.1
+                //self.b1c.alpha = 0.1
+                //self.b2c.alpha = 0.1
+                self.b3c.alpha = 0.1
+                //self.c1c.alpha = 0.1
+                self.c2c.alpha = 0.1
+                self.c3c.alpha = 0.1
+                self.d1c.alpha = 0.1
+                self.d2c.alpha = 0.1
+                self.d3c.alpha = 0.1
+                self.e1c.alpha = 0.1
+                self.e2c.alpha = 0.1
+                self.e3c.alpha = 0.1
+                
+                //self.a1v.alpha = 0.1
+                self.a2v.alpha = 0.1
+                self.a3v.alpha = 0.1
+                //self.b1v.alpha = 0.1
+                //self.b2v.alpha = 0.1
+                self.b3v.alpha = 0.1
+                //self.c1v.alpha = 0.1
+                self.c2v.alpha = 0.1
+                self.c3v.alpha = 0.1
+                self.d1v.alpha = 0.1
+                self.d2v.alpha = 0.1
+                self.d3v.alpha = 0.1
+                self.e1v.alpha = 0.1
+                self.e2v.alpha = 0.1
+                self.e3v.alpha = 0.1
+                }, completion: { finished in
+                    print("")
+            })
         }
     }
     
@@ -365,71 +412,87 @@ class Gameplay: UIViewController {
             a2p = b2p
             b2p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.a2c.alpha = 0
+                self.b2c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (b1if == true) {
             temp = b1p
             b1p = b2p
             b2p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.b1c.alpha = 0
+                self.b2c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (b3if == true) {
             temp = b3p
             b3p = b2p
             b2p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.b3c.alpha = 0
+                self.b2c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (c2if == true) {
             temp = c2p
             c2p = b2p
             b2p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.c2c.alpha = 0
+                self.b2c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (b2p != 0) {
             b2if = true
             
-            a1c.alpha = animationIntensity
-            //a2c.alpha = animationIntensity
-            a3c.alpha = animationIntensity
-            //b1c.alpha = animationIntensity
-            //b2c.alpha = animationIntensity
-            //b3c.alpha = animationIntensity
-            c1c.alpha = animationIntensity
-            //c2c.alpha = animationIntensity
-            c3c.alpha = animationIntensity
-            d1c.alpha = animationIntensity
-            d2c.alpha = animationIntensity
-            d3c.alpha = animationIntensity
-            e1c.alpha = animationIntensity
-            e2c.alpha = animationIntensity
-            e3c.alpha = animationIntensity
-            
-            a1v.alpha = animationIntensity
-            //a2v.alpha = animationIntensity
-            a3v.alpha = animationIntensity
-            //b1v.alpha = animationIntensity
-            //b2v.alpha = animationIntensity
-            //b3v.alpha = animationIntensity
-            c1v.alpha = animationIntensity
-            //c2v.alpha = animationIntensity
-            c3v.alpha = animationIntensity
-            d1v.alpha = animationIntensity
-            d2v.alpha = animationIntensity
-            d3v.alpha = animationIntensity
-            e1v.alpha = animationIntensity
-            e2v.alpha = animationIntensity
-            e3v.alpha = animationIntensity
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.a1c.alpha = 0.1
+                //self.a2c.alpha = 0.1
+                self.a3c.alpha = 0.1
+                //self.b1c.alpha = 0.1
+                //self.b2c.alpha = 0.1
+                //self.b3c.alpha = 0.1
+                self.c1c.alpha = 0.1
+                //self.c2c.alpha = 0.1
+                self.c3c.alpha = 0.1
+                self.d1c.alpha = 0.1
+                self.d2c.alpha = 0.1
+                self.d3c.alpha = 0.1
+                self.e1c.alpha = 0.1
+                self.e2c.alpha = 0.1
+                self.e3c.alpha = 0.1
+                
+                self.a1v.alpha = 0.1
+                //self.a2v.alpha = 0.1
+                self.a3v.alpha = 0.1
+                //self.b1v.alpha = 0.1
+                //self.b2v.alpha = 0.1
+                //self.b3v.alpha = 0.1
+                self.c1v.alpha = 0.1
+                //self.c2v.alpha = 0.1
+                self.c3v.alpha = 0.1
+                self.d1v.alpha = 0.1
+                self.d2v.alpha = 0.1
+                self.d3v.alpha = 0.1
+                self.e1v.alpha = 0.1
+                self.e2v.alpha = 0.1
+                self.e3v.alpha = 0.1
+                }, completion: { finished in
+                    print("")
+            })
         }
     }
     
@@ -442,62 +505,75 @@ class Gameplay: UIViewController {
             a3p = b3p
             b3p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.a3c.alpha = 0
+                self.b3c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (b2if == true) {
             temp = b2p
             b2p = b3p
             b3p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.b2c.alpha = 0
+                self.b3c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (c3if == true) {
             temp = c3p
             c3p = b3p
             b3p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.c3c.alpha = 0
+                self.b3c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (b3p != 0) {
             b3if = true
             
-            a1c.alpha = animationIntensity
-            a2c.alpha = animationIntensity
-            //a3c.alpha = animationIntensity
-            b1c.alpha = animationIntensity
-            //b2c.alpha = animationIntensity
-            //b3c.alpha = animationIntensity
-            c1c.alpha = animationIntensity
-            c2c.alpha = animationIntensity
-            //c3c.alpha = animationIntensity
-            d1c.alpha = animationIntensity
-            d2c.alpha = animationIntensity
-            d3c.alpha = animationIntensity
-            e1c.alpha = animationIntensity
-            e2c.alpha = animationIntensity
-            e3c.alpha = animationIntensity
-            
-            a1v.alpha = animationIntensity
-            a2v.alpha = animationIntensity
-            //a3v.alpha = animationIntensity
-            b1v.alpha = animationIntensity
-            //b2v.alpha = animationIntensity
-            //b3v.alpha = animationIntensity
-            c1v.alpha = animationIntensity
-            c2v.alpha = animationIntensity
-            //c3v.alpha = animationIntensity
-            d1v.alpha = animationIntensity
-            d2v.alpha = animationIntensity
-            d3v.alpha = animationIntensity
-            e1v.alpha = animationIntensity
-            e2v.alpha = animationIntensity
-            e3v.alpha = animationIntensity
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.a1c.alpha = 0.1
+                self.a2c.alpha = 0.1
+                //self.a3c.alpha = 0.1
+                self.b1c.alpha = 0.1
+                //self.b2c.alpha = 0.1
+                //self.b3c.alpha = 0.1
+                self.c1c.alpha = 0.1
+                self.c2c.alpha = 0.1
+                //self.c3c.alpha = 0.1
+                self.d1c.alpha = 0.1
+                self.d2c.alpha = 0.1
+                self.d3c.alpha = 0.1
+                self.e1c.alpha = 0.1
+                self.e2c.alpha = 0.1
+                self.e3c.alpha = 0.1
+                
+                self.a1v.alpha = 0.1
+                self.a2v.alpha = 0.1
+                //self.a3v.alpha = 0.1
+                self.b1v.alpha = 0.1
+                //self.b2v.alpha = 0.1
+                //self.b3v.alpha = 0.1
+                self.c1v.alpha = 0.1
+                self.c2v.alpha = 0.1
+                //self.c3v.alpha = 0.1
+                self.d1v.alpha = 0.1
+                self.d2v.alpha = 0.1
+                self.d3v.alpha = 0.1
+                self.e1v.alpha = 0.1
+                self.e2v.alpha = 0.1
+                self.e3v.alpha = 0.1
+                }, completion: { finished in
+                    print("")
+            })
         }
     }
     
@@ -510,62 +586,75 @@ class Gameplay: UIViewController {
             b1p = c1p
             c1p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.b1c.alpha = 0
+                self.c1c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (c2if == true) {
             temp = c2p
             c2p = c1p
             c1p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.c2c.alpha = 0
+                self.c1c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (d1if == true) {
             temp = d1p
             d1p = c1p
             c1p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.d1c.alpha = 0
+                self.c1c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (c1p != 0) {
             c1if = true
             
-            a1c.alpha = animationIntensity
-            a2c.alpha = animationIntensity
-            a3c.alpha = animationIntensity
-            //b1c.alpha = animationIntensity
-            b2c.alpha = animationIntensity
-            b3c.alpha = animationIntensity
-            //c1c.alpha = animationIntensity
-            //c2c.alpha = animationIntensity
-            c3c.alpha = animationIntensity
-            //d1c.alpha = animationIntensity
-            d2c.alpha = animationIntensity
-            d3c.alpha = animationIntensity
-            e1c.alpha = animationIntensity
-            e2c.alpha = animationIntensity
-            e3c.alpha = animationIntensity
-            
-            a1v.alpha = animationIntensity
-            a2v.alpha = animationIntensity
-            a3v.alpha = animationIntensity
-            //b1v.alpha = animationIntensity
-            b2v.alpha = animationIntensity
-            b3v.alpha = animationIntensity
-            //c1v.alpha = animationIntensity
-            //c2v.alpha = animationIntensity
-            c3v.alpha = animationIntensity
-            //d1v.alpha = animationIntensity
-            d2v.alpha = animationIntensity
-            d3v.alpha = animationIntensity
-            e1v.alpha = animationIntensity
-            e2v.alpha = animationIntensity
-            e3v.alpha = animationIntensity
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.a1c.alpha = 0.1
+                self.a2c.alpha = 0.1
+                self.a3c.alpha = 0.1
+                //self.b1c.alpha = 0.1
+                self.b2c.alpha = 0.1
+                self.b3c.alpha = 0.1
+                //self.c1c.alpha = 0.1
+                //self.c2c.alpha = 0.1
+                self.c3c.alpha = 0.1
+                //self.d1c.alpha = 0.1
+                self.d2c.alpha = 0.1
+                self.d3c.alpha = 0.1
+                self.e1c.alpha = 0.1
+                self.e2c.alpha = 0.1
+                self.e3c.alpha = 0.1
+                
+                self.a1v.alpha = 0.1
+                self.a2v.alpha = 0.1
+                self.a3v.alpha = 0.1
+                //self.b1v.alpha = 0.1
+                self.b2v.alpha = 0.1
+                self.b3v.alpha = 0.1
+                //self.c1v.alpha = 0.1
+                //self.c2v.alpha = 0.1
+                self.c3v.alpha = 0.1
+                //self.d1v.alpha = 0.1
+                self.d2v.alpha = 0.1
+                self.d3v.alpha = 0.1
+                self.e1v.alpha = 0.1
+                self.e2v.alpha = 0.1
+                self.e3v.alpha = 0.1
+                }, completion: { finished in
+                    print("")
+            })
         }
     }
     
@@ -578,71 +667,87 @@ class Gameplay: UIViewController {
             b2p = c2p
             c2p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.b2c.alpha = 0
+                self.c2c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (c1if == true) {
             temp = c1p
             c1p = c2p
             c2p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.c1c.alpha = 0
+                self.c2c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (c3if == true) {
             temp = c3p
             c3p = c2p
             c2p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.c3c.alpha = 0
+                self.c2c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (d2if == true) {
             temp = d2p
             d2p = c2p
             c2p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.d2c.alpha = 0
+                self.c2c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (c2p != 0) {
             c2if = true
             
-            a1c.alpha = animationIntensity
-            a2c.alpha = animationIntensity
-            a3c.alpha = animationIntensity
-            b1c.alpha = animationIntensity
-            //b2c.alpha = animationIntensity
-            b3c.alpha = animationIntensity
-            //c1c.alpha = animationIntensity
-            //c2c.alpha = animationIntensity
-            //c3c.alpha = animationIntensity
-            d1c.alpha = animationIntensity
-            //d2c.alpha = animationIntensity
-            d3c.alpha = animationIntensity
-            e1c.alpha = animationIntensity
-            e2c.alpha = animationIntensity
-            e3c.alpha = animationIntensity
-            
-            a1v.alpha = animationIntensity
-            a2v.alpha = animationIntensity
-            a3v.alpha = animationIntensity
-            b1v.alpha = animationIntensity
-            //b2v.alpha = animationIntensity
-            b3v.alpha = animationIntensity
-            //c1v.alpha = animationIntensity
-            //c2v.alpha = animationIntensity
-            //c3v.alpha = animationIntensity
-            d1v.alpha = animationIntensity
-            //d2v.alpha = animationIntensity
-            d3v.alpha = animationIntensity
-            e1v.alpha = animationIntensity
-            e2v.alpha = animationIntensity
-            e3v.alpha = animationIntensity
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.a1c.alpha = 0.1
+                self.a2c.alpha = 0.1
+                self.a3c.alpha = 0.1
+                self.b1c.alpha = 0.1
+                //self.b2c.alpha = 0.1
+                self.b3c.alpha = 0.1
+                //self.c1c.alpha = 0.1
+                //self.c2c.alpha = 0.1
+                //self.c3c.alpha = 0.1
+                self.d1c.alpha = 0.1
+                //self.d2c.alpha = 0.1
+                self.d3c.alpha = 0.1
+                self.e1c.alpha = 0.1
+                self.e2c.alpha = 0.1
+                self.e3c.alpha = 0.1
+                
+                self.a1v.alpha = 0.1
+                self.a2v.alpha = 0.1
+                self.a3v.alpha = 0.1
+                self.b1v.alpha = 0.1
+                //self.b2v.alpha = 0.1
+                self.b3v.alpha = 0.1
+                //self.c1v.alpha = 0.1
+                //self.c2v.alpha = 0.1
+                //self.c3v.alpha = 0.1
+                self.d1v.alpha = 0.1
+                //self.d2v.alpha = 0.1
+                self.d3v.alpha = 0.1
+                self.e1v.alpha = 0.1
+                self.e2v.alpha = 0.1
+                self.e3v.alpha = 0.1
+                }, completion: { finished in
+                    print("")
+            })
         }
     }
     
@@ -655,62 +760,75 @@ class Gameplay: UIViewController {
             b3p = c3p
             c3p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.b3c.alpha = 0
+                self.c3c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (c2if == true) {
             temp = c2p
             c2p = c3p
             c3p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.c2c.alpha = 0
+                self.c3c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (d3if == true) {
             temp = d3p
             d3p = c3p
             c3p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.d3c.alpha = 0
+                self.c3c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (c3p != 0) {
             c3if = true
             
-            a1c.alpha = animationIntensity
-            a2c.alpha = animationIntensity
-            a3c.alpha = animationIntensity
-            b1c.alpha = animationIntensity
-            b2c.alpha = animationIntensity
-            //b3c.alpha = animationIntensity
-            c1c.alpha = animationIntensity
-            //c2c.alpha = animationIntensity
-            //c3c.alpha = animationIntensity
-            d1c.alpha = animationIntensity
-            d2c.alpha = animationIntensity
-            //d3c.alpha = animationIntensity
-            e1c.alpha = animationIntensity
-            e2c.alpha = animationIntensity
-            e3c.alpha = animationIntensity
-            
-            a1v.alpha = animationIntensity
-            a2v.alpha = animationIntensity
-            a3v.alpha = animationIntensity
-            b1v.alpha = animationIntensity
-            b2v.alpha = animationIntensity
-            //b3v.alpha = animationIntensity
-            c1v.alpha = animationIntensity
-            //c2v.alpha = animationIntensity
-            //c3v.alpha = animationIntensity
-            d1v.alpha = animationIntensity
-            d2v.alpha = animationIntensity
-            //d3v.alpha = animationIntensity
-            e1v.alpha = animationIntensity
-            e2v.alpha = animationIntensity
-            e3v.alpha = animationIntensity
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.a1c.alpha = 0.1
+                self.a2c.alpha = 0.1
+                self.a3c.alpha = 0.1
+                self.b1c.alpha = 0.1
+                self.b2c.alpha = 0.1
+                //self.b3c.alpha = 0.1
+                self.c1c.alpha = 0.1
+                //self.c2c.alpha = 0.1
+                //self.c3c.alpha = 0.1
+                self.d1c.alpha = 0.1
+                self.d2c.alpha = 0.1
+                //self.d3c.alpha = 0.1
+                self.e1c.alpha = 0.1
+                self.e2c.alpha = 0.1
+                self.e3c.alpha = 0.1
+                
+                self.a1v.alpha = 0.1
+                self.a2v.alpha = 0.1
+                self.a3v.alpha = 0.1
+                self.b1v.alpha = 0.1
+                self.b2v.alpha = 0.1
+                //self.b3v.alpha = 0.1
+                self.c1v.alpha = 0.1
+                //self.c2v.alpha = 0.1
+                //self.c3v.alpha = 0.1
+                self.d1v.alpha = 0.1
+                self.d2v.alpha = 0.1
+                //self.d3v.alpha = 0.1
+                self.e1v.alpha = 0.1
+                self.e2v.alpha = 0.1
+                self.e3v.alpha = 0.1
+                }, completion: { finished in
+                    print("")
+            })
         }
     }
     
@@ -723,62 +841,75 @@ class Gameplay: UIViewController {
             c1p = d1p
             d1p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.c1c.alpha = 0
+                self.d1c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (d2if == true) {
             temp = d2p
             d2p = d1p
             d1p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.d2c.alpha = 0
+                self.d1c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (e1if == true) {
             temp = e1p
             e1p = d1p
             d1p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.e1c.alpha = 0
+                self.d1c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (d1p != 0) {
             d1if = true
             
-            a1c.alpha = animationIntensity
-            a2c.alpha = animationIntensity
-            a3c.alpha = animationIntensity
-            b1c.alpha = animationIntensity
-            b2c.alpha = animationIntensity
-            b3c.alpha = animationIntensity
-            //c1c.alpha = animationIntensity
-            c2c.alpha = animationIntensity
-            c3c.alpha = animationIntensity
-            //d1c.alpha = animationIntensity
-            //d2c.alpha = animationIntensity
-            d3c.alpha = animationIntensity
-            //e1c.alpha = animationIntensity
-            e2c.alpha = animationIntensity
-            e3c.alpha = animationIntensity
-            
-            a1v.alpha = animationIntensity
-            a2v.alpha = animationIntensity
-            a3v.alpha = animationIntensity
-            b1v.alpha = animationIntensity
-            b2v.alpha = animationIntensity
-            b3v.alpha = animationIntensity
-            //c1v.alpha = animationIntensity
-            c2v.alpha = animationIntensity
-            c3v.alpha = animationIntensity
-            //d1v.alpha = animationIntensity
-            //d2v.alpha = animationIntensity
-            d3v.alpha = animationIntensity
-            //e1v.alpha = animationIntensity
-            e2v.alpha = animationIntensity
-            e3v.alpha = animationIntensity
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.a1c.alpha = 0.1
+                self.a2c.alpha = 0.1
+                self.a3c.alpha = 0.1
+                self.b1c.alpha = 0.1
+                self.b2c.alpha = 0.1
+                self.b3c.alpha = 0.1
+                //self.c1c.alpha = 0.1
+                self.c2c.alpha = 0.1
+                self.c3c.alpha = 0.1
+                //self.d1c.alpha = 0.1
+                //self.d2c.alpha = 0.1
+                self.d3c.alpha = 0.1
+                //self.e1c.alpha = 0.1
+                self.e2c.alpha = 0.1
+                self.e3c.alpha = 0.1
+                
+                self.a1v.alpha = 0.1
+                self.a2v.alpha = 0.1
+                self.a3v.alpha = 0.1
+                self.b1v.alpha = 0.1
+                self.b2v.alpha = 0.1
+                self.b3v.alpha = 0.1
+                //self.c1v.alpha = 0.1
+                self.c2v.alpha = 0.1
+                self.c3v.alpha = 0.1
+                //self.d1v.alpha = 0.1
+                //self.d2v.alpha = 0.1
+                self.d3v.alpha = 0.1
+                //self.e1v.alpha = 0.1
+                self.e2v.alpha = 0.1
+                self.e3v.alpha = 0.1
+                }, completion: { finished in
+                    print("")
+            })
         }
     }
     
@@ -791,71 +922,87 @@ class Gameplay: UIViewController {
             c2p = d2p
             d2p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.c2c.alpha = 0
+                self.d2c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (d1if == true) {
             temp = d1p
             d1p = d2p
             d2p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.d1c.alpha = 0
+                self.d2c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (d3if == true) {
             temp = d3p
             d3p = d2p
             d2p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.d3c.alpha = 0
+                self.d2c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (e2if == true) {
             temp = e2p
             e2p = d2p
             d2p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.e2c.alpha = 0
+                self.d2c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (d2p != 0) {
             d2if = true
             
-            a1c.alpha = animationIntensity
-            a2c.alpha = animationIntensity
-            a3c.alpha = animationIntensity
-            b1c.alpha = animationIntensity
-            b2c.alpha = animationIntensity
-            b3c.alpha = animationIntensity
-            c1c.alpha = animationIntensity
-            //c2c.alpha = animationIntensity
-            c3c.alpha = animationIntensity
-            //d1c.alpha = animationIntensity
-            //d2c.alpha = animationIntensity
-            //d3c.alpha = animationIntensity
-            e1c.alpha = animationIntensity
-            //e2c.alpha = animationIntensity
-            e3c.alpha = animationIntensity
-            
-            a1v.alpha = animationIntensity
-            a2v.alpha = animationIntensity
-            a3v.alpha = animationIntensity
-            b1v.alpha = animationIntensity
-            b2v.alpha = animationIntensity
-            b3v.alpha = animationIntensity
-            c1v.alpha = animationIntensity
-            //c2v.alpha = animationIntensity
-            c3v.alpha = animationIntensity
-            //d1v.alpha = animationIntensity
-            //d2v.alpha = animationIntensity
-            //d3v.alpha = animationIntensity
-            e1v.alpha = animationIntensity
-            //e2v.alpha = animationIntensity
-            e3v.alpha = animationIntensity
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.a1c.alpha = 0.1
+                self.a2c.alpha = 0.1
+                self.a3c.alpha = 0.1
+                self.b1c.alpha = 0.1
+                self.b2c.alpha = 0.1
+                self.b3c.alpha = 0.1
+                self.c1c.alpha = 0.1
+                //self.c2c.alpha = 0.1
+                self.c3c.alpha = 0.1
+                //self.d1c.alpha = 0.1
+                //self.d2c.alpha = 0.1
+                //self.d3c.alpha = 0.1
+                self.e1c.alpha = 0.1
+                //self.e2c.alpha = 0.1
+                self.e3c.alpha = 0.1
+                
+                self.a1v.alpha = 0.1
+                self.a2v.alpha = 0.1
+                self.a3v.alpha = 0.1
+                self.b1v.alpha = 0.1
+                self.b2v.alpha = 0.1
+                self.b3v.alpha = 0.1
+                self.c1v.alpha = 0.1
+                //self.c2v.alpha = 0.1
+                self.c3v.alpha = 0.1
+                //self.d1v.alpha = 0.1
+                //self.d2v.alpha = 0.1
+                //self.d3v.alpha = 0.1
+                self.e1v.alpha = 0.1
+                //self.e2v.alpha = 0.1
+                self.e3v.alpha = 0.1
+                }, completion: { finished in
+                    print("")
+            })
         }
     }
     
@@ -868,62 +1015,75 @@ class Gameplay: UIViewController {
             c3p = d3p
             d3p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.c3c.alpha = 0
+                self.d3c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (d2if == true) {
             temp = d2p
             d2p = d3p
             d3p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.d2c.alpha = 0
+                self.d3c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (e3if == true) {
             temp = e3p
             e3p = d3p
             d3p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.e3c.alpha = 0
+                self.d3c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (d3p != 0) {
             d3if = true
             
-            a1c.alpha = animationIntensity
-            a2c.alpha = animationIntensity
-            a3c.alpha = animationIntensity
-            b1c.alpha = animationIntensity
-            b2c.alpha = animationIntensity
-            b3c.alpha = animationIntensity
-            c1c.alpha = animationIntensity
-            c2c.alpha = animationIntensity
-            //c3c.alpha = animationIntensity
-            d1c.alpha = animationIntensity
-            //d2c.alpha = animationIntensity
-            //d3c.alpha = animationIntensity
-            e1c.alpha = animationIntensity
-            e2c.alpha = animationIntensity
-            //e3c.alpha = animationIntensity
-            
-            a1v.alpha = animationIntensity
-            a2v.alpha = animationIntensity
-            a3v.alpha = animationIntensity
-            b1v.alpha = animationIntensity
-            b2v.alpha = animationIntensity
-            b3v.alpha = animationIntensity
-            c1v.alpha = animationIntensity
-            c2v.alpha = animationIntensity
-            //c3v.alpha = animationIntensity
-            d1v.alpha = animationIntensity
-            //d2v.alpha = animationIntensity
-            //d3v.alpha = animationIntensity
-            e1v.alpha = animationIntensity
-            e2v.alpha = animationIntensity
-            //e3v.alpha = animationIntensity
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.a1c.alpha = 0.1
+                self.a2c.alpha = 0.1
+                self.a3c.alpha = 0.1
+                self.b1c.alpha = 0.1
+                self.b2c.alpha = 0.1
+                self.b3c.alpha = 0.1
+                self.c1c.alpha = 0.1
+                self.c2c.alpha = 0.1
+                //self.c3c.alpha = 0.1
+                self.d1c.alpha = 0.1
+                //self.d2c.alpha = 0.1
+                //self.d3c.alpha = 0.1
+                self.e1c.alpha = 0.1
+                self.e2c.alpha = 0.1
+                //self.e3c.alpha = 0.1
+                
+                self.a1v.alpha = 0.1
+                self.a2v.alpha = 0.1
+                self.a3v.alpha = 0.1
+                self.b1v.alpha = 0.1
+                self.b2v.alpha = 0.1
+                self.b3v.alpha = 0.1
+                self.c1v.alpha = 0.1
+                self.c2v.alpha = 0.1
+                //self.c3v.alpha = 0.1
+                self.d1v.alpha = 0.1
+                //self.d2v.alpha = 0.1
+                //self.d3v.alpha = 0.1
+                self.e1v.alpha = 0.1
+                self.e2v.alpha = 0.1
+                //self.e3v.alpha = 0.1
+                }, completion: { finished in
+                    print("")
+            })
         }
     }
     
@@ -936,53 +1096,63 @@ class Gameplay: UIViewController {
             d1p = e1p
             e1p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.d1c.alpha = 0
+                self.e1c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (e2if == true) {
             temp = e2p
             e2p = e1p
             e1p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.e2c.alpha = 0
+                self.e1c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (e1p != 0) {
             e1if = true
             
-            a1c.alpha = animationIntensity
-            a2c.alpha = animationIntensity
-            a3c.alpha = animationIntensity
-            b1c.alpha = animationIntensity
-            b2c.alpha = animationIntensity
-            b3c.alpha = animationIntensity
-            c1c.alpha = animationIntensity
-            c2c.alpha = animationIntensity
-            c3c.alpha = animationIntensity
-            //d1c.alpha = animationIntensity
-            d2c.alpha = animationIntensity
-            d3c.alpha = animationIntensity
-            //e1c.alpha = animationIntensity
-            //e2c.alpha = animationIntensity
-            e3c.alpha = animationIntensity
-            
-            a1v.alpha = animationIntensity
-            a2v.alpha = animationIntensity
-            a3v.alpha = animationIntensity
-            b1v.alpha = animationIntensity
-            b2v.alpha = animationIntensity
-            b3v.alpha = animationIntensity
-            c1v.alpha = animationIntensity
-            c2v.alpha = animationIntensity
-            c3v.alpha = animationIntensity
-            //d1v.alpha = animationIntensity
-            d2v.alpha = animationIntensity
-            d3v.alpha = animationIntensity
-            //e1v.alpha = animationIntensity
-            //e2v.alpha = animationIntensity
-            e3v.alpha = animationIntensity
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.a1c.alpha = 0.1
+                self.a2c.alpha = 0.1
+                self.a3c.alpha = 0.1
+                self.b1c.alpha = 0.1
+                self.b2c.alpha = 0.1
+                self.b3c.alpha = 0.1
+                self.c1c.alpha = 0.1
+                self.c2c.alpha = 0.1
+                self.c3c.alpha = 0.1
+                //self.d1c.alpha = 0.1
+                self.d2c.alpha = 0.1
+                self.d3c.alpha = 0.1
+                //self.e1c.alpha = 0.1
+                //self.e2c.alpha = 0.1
+                self.e3c.alpha = 0.1
+                
+                self.a1v.alpha = 0.1
+                self.a2v.alpha = 0.1
+                self.a3v.alpha = 0.1
+                self.b1v.alpha = 0.1
+                self.b2v.alpha = 0.1
+                self.b3v.alpha = 0.1
+                self.c1v.alpha = 0.1
+                self.c2v.alpha = 0.1
+                self.c3v.alpha = 0.1
+                //self.d1v.alpha = 0.1
+                self.d2v.alpha = 0.1
+                self.d3v.alpha = 0.1
+                //self.e1v.alpha = 0.1
+                //self.e2v.alpha = 0.1
+                self.e3v.alpha = 0.1
+                }, completion: { finished in
+                    print("")
+            })
         }
     }
     
@@ -995,62 +1165,75 @@ class Gameplay: UIViewController {
             d2p = e2p
             e2p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.d2c.alpha = 0
+                self.e2c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (e1if == true) {
             temp = e1p
             e1p = e2p
             e2p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.e1c.alpha = 0
+                self.e2c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (e3if == true) {
             temp = e3p
             e3p = e2p
             e2p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.e3c.alpha = 0
+                self.e2c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (e2p != 0) {
             e2if = true
             
-            a1c.alpha = animationIntensity
-            a2c.alpha = animationIntensity
-            a3c.alpha = animationIntensity
-            b1c.alpha = animationIntensity
-            b2c.alpha = animationIntensity
-            b3c.alpha = animationIntensity
-            c1c.alpha = animationIntensity
-            c2c.alpha = animationIntensity
-            c3c.alpha = animationIntensity
-            d1c.alpha = animationIntensity
-            //d2c.alpha = animationIntensity
-            d3c.alpha = animationIntensity
-            //e1c.alpha = animationIntensity
-            //e2c.alpha = animationIntensity
-            //e3c.alpha = animationIntensity
-            
-            a1v.alpha = animationIntensity
-            a2v.alpha = animationIntensity
-            a3v.alpha = animationIntensity
-            b1v.alpha = animationIntensity
-            b2v.alpha = animationIntensity
-            b3v.alpha = animationIntensity
-            c1v.alpha = animationIntensity
-            c2v.alpha = animationIntensity
-            c3v.alpha = animationIntensity
-            d1v.alpha = animationIntensity
-            //d2v.alpha = animationIntensity
-            d3v.alpha = animationIntensity
-            //e1v.alpha = animationIntensity
-            //e2v.alpha = animationIntensity
-            //e3v.alpha = animationIntensity
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.a1c.alpha = 0.1
+                self.a2c.alpha = 0.1
+                self.a3c.alpha = 0.1
+                self.b1c.alpha = 0.1
+                self.b2c.alpha = 0.1
+                self.b3c.alpha = 0.1
+                self.c1c.alpha = 0.1
+                self.c2c.alpha = 0.1
+                self.c3c.alpha = 0.1
+                self.d1c.alpha = 0.1
+                //self.d2c.alpha = 0.1
+                self.d3c.alpha = 0.1
+                //self.e1c.alpha = 0.1
+                //self.e2c.alpha = 0.1
+                //self.e3c.alpha = 0.1
+                
+                self.a1v.alpha = 0.1
+                self.a2v.alpha = 0.1
+                self.a3v.alpha = 0.1
+                self.b1v.alpha = 0.1
+                self.b2v.alpha = 0.1
+                self.b3v.alpha = 0.1
+                self.c1v.alpha = 0.1
+                self.c2v.alpha = 0.1
+                self.c3v.alpha = 0.1
+                self.d1v.alpha = 0.1
+                //self.d2v.alpha = 0.1
+                self.d3v.alpha = 0.1
+                //self.e1v.alpha = 0.1
+                //self.e2v.alpha = 0.1
+                //self.e3v.alpha = 0.1
+                }, completion: { finished in
+                    print("")
+            })
         }
     }
     
@@ -1063,58 +1246,68 @@ class Gameplay: UIViewController {
             d3p = e3p
             e3p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.d3c.alpha = 0
+                self.e3c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (e2if == true) {
             temp = e2p
             e2p = e3p
             e3p = temp
             
-            cancelGrid()
-            loadSpaces()
-            endTurn()
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.e2c.alpha = 0
+                self.e3c.alpha = 0
+                }, completion: { finished in
+                    self.endAnimation()
+            })
         }
         else if (e3p != 0) {
             e3if = true
             
-            a1c.alpha = animationIntensity
-            a2c.alpha = animationIntensity
-            a3c.alpha = animationIntensity
-            b1c.alpha = animationIntensity
-            b2c.alpha = animationIntensity
-            b3c.alpha = animationIntensity
-            c1c.alpha = animationIntensity
-            c2c.alpha = animationIntensity
-            c3c.alpha = animationIntensity
-            d1c.alpha = animationIntensity
-            d2c.alpha = animationIntensity
-            //d3c.alpha = animationIntensity
-            e1c.alpha = animationIntensity
-            //e2c.alpha = animationIntensity
-            //e3c.alpha = animationIntensity
-            
-            a1v.alpha = animationIntensity
-            a2v.alpha = animationIntensity
-            a3v.alpha = animationIntensity
-            b1v.alpha = animationIntensity
-            b2v.alpha = animationIntensity
-            b3v.alpha = animationIntensity
-            c1v.alpha = animationIntensity
-            c2v.alpha = animationIntensity
-            c3v.alpha = animationIntensity
-            d1v.alpha = animationIntensity
-            d2v.alpha = animationIntensity
-            //d3v.alpha = animationIntensity
-            e1v.alpha = animationIntensity
-            //e2v.alpha = animationIntensity
-            //e3v.alpha = animationIntensity
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.a1c.alpha = 0.1
+                self.a2c.alpha = 0.1
+                self.a3c.alpha = 0.1
+                self.b1c.alpha = 0.1
+                self.b2c.alpha = 0.1
+                self.b3c.alpha = 0.1
+                self.c1c.alpha = 0.1
+                self.c2c.alpha = 0.1
+                self.c3c.alpha = 0.1
+                self.d1c.alpha = 0.1
+                self.d2c.alpha = 0.1
+                //self.d3c.alpha = 0.1
+                self.e1c.alpha = 0.1
+                //self.e2c.alpha = 0.1
+                //self.e3c.alpha = 0.1
+                
+                self.a1v.alpha = 0.1
+                self.a2v.alpha = 0.1
+                self.a3v.alpha = 0.1
+                self.b1v.alpha = 0.1
+                self.b2v.alpha = 0.1
+                self.b3v.alpha = 0.1
+                self.c1v.alpha = 0.1
+                self.c2v.alpha = 0.1
+                self.c3v.alpha = 0.1
+                self.d1v.alpha = 0.1
+                self.d2v.alpha = 0.1
+                //self.d3v.alpha = 0.1
+                self.e1v.alpha = 0.1
+                //self.e2v.alpha = 0.1
+                //self.e3v.alpha = 0.1
+                }, completion: { finished in
+                    print("")
+            })
         }
     }
     
     @IBAction func retry(sender: AnyObject) {
-        UIView.animateWithDuration(0.25) {
+        UIView.animateWithDuration(0.2) {
             self.dimView.alpha = 0
             self.endView.alpha = 0
         }
@@ -1250,14 +1443,13 @@ class Gameplay: UIViewController {
     func endTurn(){
         checkRows()
         
+        temp = 0
+        while temp < 1 {
+            randomizeGrid()
+        }
+        
         if (a1p != 0 && a2p != 0 && a3p != 0 && b1p != 0 && b2p != 0 && b3p != 0 && c1p != 0 && c2p != 0 && c3p != 0 && d1p != 0 && d2p != 0 && d3p != 0 && e1p != 0 && e2p != 0 && e3p != 0) {
             gameOver()
-        }
-        else {
-            temp = 0
-            while temp < 1 {
-                randomizeGrid()
-            }
         }
     }
     
@@ -1290,10 +1482,16 @@ class Gameplay: UIViewController {
     }
     
     func gameOver(){
-        UIView.animateWithDuration(0.25) {
+        UIView.animateWithDuration(0.2) {
             self.dimView.alpha = 0.5
             self.endView.alpha = 1
         }
+    }
+    
+    func endAnimation(){
+        cancelGrid()
+        loadSpaces()
+        endTurn()
     }
     
     func cancelGrid(){
@@ -1315,53 +1513,57 @@ class Gameplay: UIViewController {
         e3if = false
         
         //make all views visible
-        a1v.alpha = 1
-        a2v.alpha = 1
-        a3v.alpha = 1
-        b1v.alpha = 1
-        b2v.alpha = 1
-        b3v.alpha = 1
-        c1v.alpha = 1
-        c2v.alpha = 1
-        c3v.alpha = 1
-        d1v.alpha = 1
-        d2v.alpha = 1
-        d3v.alpha = 1
-        e1v.alpha = 1
-        e2v.alpha = 1
-        e3v.alpha = 1
-        
-        a1c.alpha = 1
-        a2c.alpha = 1
-        a3c.alpha = 1
-        b1c.alpha = 1
-        b2c.alpha = 1
-        b3c.alpha = 1
-        c1c.alpha = 1
-        c2c.alpha = 1
-        c3c.alpha = 1
-        d1c.alpha = 1
-        d2c.alpha = 1
-        d3c.alpha = 1
-        e1c.alpha = 1
-        e2c.alpha = 1
-        e3c.alpha = 1
-        
-        a1i.alpha = 1
-        a2i.alpha = 1
-        a3i.alpha = 1
-        b1i.alpha = 1
-        b2i.alpha = 1
-        b3i.alpha = 1
-        c1i.alpha = 1
-        c2i.alpha = 1
-        c3i.alpha = 1
-        d1i.alpha = 1
-        d2i.alpha = 1
-        d3i.alpha = 1
-        e1i.alpha = 1
-        e2i.alpha = 1
-        e3i.alpha = 1
+        UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+            self.a1v.alpha = 1
+            self.a2v.alpha = 1
+            self.a3v.alpha = 1
+            self.b1v.alpha = 1
+            self.b2v.alpha = 1
+            self.b3v.alpha = 1
+            self.c1v.alpha = 1
+            self.c2v.alpha = 1
+            self.c3v.alpha = 1
+            self.d1v.alpha = 1
+            self.d2v.alpha = 1
+            self.d3v.alpha = 1
+            self.e1v.alpha = 1
+            self.e2v.alpha = 1
+            self.e3v.alpha = 1
+            
+            self.a1c.alpha = 1
+            self.a2c.alpha = 1
+            self.a3c.alpha = 1
+            self.b1c.alpha = 1
+            self.b2c.alpha = 1
+            self.b3c.alpha = 1
+            self.c1c.alpha = 1
+            self.c2c.alpha = 1
+            self.c3c.alpha = 1
+            self.d1c.alpha = 1
+            self.d2c.alpha = 1
+            self.d3c.alpha = 1
+            self.e1c.alpha = 1
+            self.e2c.alpha = 1
+            self.e3c.alpha = 1
+            
+            self.a1i.alpha = 1
+            self.a2i.alpha = 1
+            self.a3i.alpha = 1
+            self.b1i.alpha = 1
+            self.b2i.alpha = 1
+            self.b3i.alpha = 1
+            self.c1i.alpha = 1
+            self.c2i.alpha = 1
+            self.c3i.alpha = 1
+            self.d1i.alpha = 1
+            self.d2i.alpha = 1
+            self.d3i.alpha = 1
+            self.e1i.alpha = 1
+            self.e2i.alpha = 1
+            self.e3i.alpha = 1
+            }, completion: { finished in
+                print("")
+        })
     }
     
     func loadSpaces(){
