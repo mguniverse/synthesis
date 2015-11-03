@@ -17,9 +17,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        playView.layer.cornerRadius = 12
+        playView.layer.cornerRadius = 4
         playView.clipsToBounds = true
-        aboutView.layer.cornerRadius = 12
+        aboutView.layer.cornerRadius = 4
         aboutView.clipsToBounds = true
     }
 

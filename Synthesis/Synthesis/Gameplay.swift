@@ -9,7 +9,7 @@
 import UIKit
 
 class Gameplay: UIViewController {
-    var border:CGFloat = 12.0
+    var border:CGFloat = 4.0
     var animationIntensity:CGFloat = 0.1
     var animationSpeed:Double = 0.25
     
