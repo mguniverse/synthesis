@@ -32,6 +32,10 @@ class Gameplay: UIViewController {
     
     var temp:UInt32 = 0
     
+    var score:UInt32 = 0
+    var top:UInt32 = 0
+    var daily:UInt32 = 0
+    
     var a1if:Bool = false
     var a2if:Bool = false
     var a3if:Bool = false
@@ -102,6 +106,8 @@ class Gameplay: UIViewController {
     @IBOutlet weak var e1i: UIImageView!
     @IBOutlet weak var e2i: UIImageView!
     @IBOutlet weak var e3i: UIImageView!
+    
+    @IBOutlet weak var harvestLabel: UILabel!
     
     @IBAction func a1a(sender: AnyObject) {
         if (a1if == true) {
@@ -1312,6 +1318,8 @@ class Gameplay: UIViewController {
             self.endView.alpha = 0
         }
         
+        score = 0;
+        
         a1p = 0
         a2p = 0
         a3p = 0
@@ -1331,6 +1339,7 @@ class Gameplay: UIViewController {
         randomizeGrid()
     }
     
+    //this function spawns a random vegetable
     func randomizeGrid(){
         let plant:UInt32 = 1 + (arc4random()%3)
         let column = arc4random() % 3
@@ -1437,6 +1446,7 @@ class Gameplay: UIViewController {
             }
         }
         
+        checkRows()
         loadSpaces()
     }
     
@@ -1458,30 +1468,46 @@ class Gameplay: UIViewController {
             a1p = 0
             a2p = 0
             a3p = 0
+            
+            score = score + 3
         }
         if (b1p == b2p && b2p == b3p) {
             b1p = 0
             b2p = 0
             b3p = 0
+            
+            score = score + 3
         }
         if (c1p == c2p && c2p == c3p) {
             c1p = 0
             c2p = 0
             c3p = 0
+            
+            score = score + 3
         }
         if (d1p == d2p && d2p == d3p) {
             d1p = 0
             d2p = 0
             d3p = 0
+            
+            score = score + 3
         }
         if (e1p == e2p && e2p == e3p) {
             e1p = 0
             e2p = 0
             e3p = 0
+            
+            score = score + 3
         }
+        
+        self.harvestLabel.text = String(score)
     }
     
     func gameOver(){
+        if (top < score) {
+            top = score
+        }
+        
         UIView.animateWithDuration(animationSpeed) {
             self.dimView.alpha = 0.5
             self.endView.alpha = 1
