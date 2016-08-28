@@ -1464,35 +1464,35 @@ class Gameplay: UIViewController {
     }
     
     func checkRows(){
-        if (a1p == a2p && a2p == a3p) {
+        if (a1p == a2p && a2p == a3p && a1p != 0 && a2p != 0 && a3p != 0) {
             a1p = 0
             a2p = 0
             a3p = 0
             
             score = score + 3
         }
-        if (b1p == b2p && b2p == b3p) {
+        if (b1p == b2p && b2p == b3p && b1p != 0 && b2p != 0 && b3p != 0) {
             b1p = 0
             b2p = 0
             b3p = 0
             
             score = score + 3
         }
-        if (c1p == c2p && c2p == c3p) {
+        if (c1p == c2p && c2p == c3p && c1p != 0 && c2p != 0 && c3p != 0) {
             c1p = 0
             c2p = 0
             c3p = 0
             
             score = score + 3
         }
-        if (d1p == d2p && d2p == d3p) {
+        if (d1p == d2p && d2p == d3p && d1p != 0 && d2p != 0 && d3p != 0) {
             d1p = 0
             d2p = 0
             d3p = 0
             
             score = score + 3
         }
-        if (e1p == e2p && e2p == e3p) {
+        if (e1p == e2p && e2p == e3p && e1p != 0 && e2p != 0 && e3p != 0) {
             e1p = 0
             e2p = 0
             e3p = 0
